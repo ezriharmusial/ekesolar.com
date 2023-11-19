@@ -43,17 +43,7 @@ const t = useTranslations(lang);
 </div>
 
 <div class={parentDirectionClass + " bg-secondary-600 w-full"}>
-    <input type="radio" name="menu" id="projects" class="helper-trigger !hidden" />
-    <div class="dropdown bg-secondary-600 w-full">
-        <label for="projects" class="btn variant-filled-secondary w-full rounded-none py-4 helper-enable">
-            <span class={directionClass}>
-                <Icon pack="bytesize" name="portfolio" class={size} />
-                <span>
-                    {t('nav.projects')}
-                </span>
-            </span>
-        </label>
-        <div class={parentDirectionClass + " bg-secondary-600 w-full" + " helper-show" }>
+
             {projectList && projectList.filter(project => getLangFromId(project) == lang).map(project => (
                 <a href={"/" + project.slug.split('/')[0] + "/projects/" + project.slug.split('/')[1]} class={"btn variant-filled-secondary w-full rounded-none justify-start pl-2 " + project.slug.split('/')[0]}>
                     <span class="flex flex-row justify-start items-center text-md">
@@ -70,8 +60,6 @@ const t = useTranslations(lang);
                     </span>
                 </a>
             ))}
-        </div>
-    </div>
 </div>
 
 
