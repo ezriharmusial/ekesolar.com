@@ -1,20 +1,17 @@
+---
+import BrandFlag from "./BrandFlag.astro";
+
+---
+
 <div class="app-loader backdrop-saturate-50 backdrop-blur-sm w-screen h-screen flex flex-col justify-around items-center fixed top-0 left-0 z-40">
     <div class="wrapper w-screen flex flex-row items-center justify-center scale-100 transition-transform duration-500 z-40">
         <div class="image flex flex-row justify-around items-center">
             <div class="marker h-full w-full italic font-sans items-center !no-underline drop-shadow-xl hover:text-yellow-400 dark:focus:text-gray-100 px-2 py-4">
-                <h1 class="unstyled flex items-center gap-1 transition-colors duration-500 text-left font-extrabold text-7xl hover:text-yellow-400 dark:focus:text-gray-100">
-
-                    <div class="hexagon hexagon-large"><div class="hexagon-in1"><div class="hexagon-in2">
-                    </div></div></div>
-
-                    <span class="text-outline-white-3">
-                        <span class="block text-red-500">Artkids</span><span class=" text-yellow-400">Foundation</span><span class="text-green-500">.org</span>
-                    </span>
-                </h1>
+                <BrandFlag size={"hexagon-large"} />
             </div>
         </div>
     </div>
-    <h2 class="uppercase text-white text-xl font-bold drop-shadow-2xl leading-6 md:text-2xl md:leading-8 lg:text-4xl xl:text-5xl lg:leading-12 xl:leading-16 hover:text-yellow-400 dark:focus:text-gray-10">Loading...</h2>
+    <p class="uppercase text-white text-xl font-bold drop-shadow-2xl leading-6 md:text-2xl md:leading-8 lg:text-4xl xl:text-5xl lg:leading-12 xl:leading-16 hover:text-yellow-400 dark:focus:text-gray-10">Loading...</p>
 </div>
 
 
@@ -95,7 +92,7 @@
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
-    background-image: url('/logo-512.png');
+    background-image: url('/android-chrome-256x256.png');
     visibility: visible;
     -webkit-transform: rotate(-60deg);
        -moz-transform: rotate(-60deg);
@@ -104,6 +101,11 @@
             transform: rotate(-60deg);
     }
 
+.hexagon-xlarge {
+    width: 300px;
+    height: 600px;
+    margin-right: 2rem;
+}
 
 .hexagon-large {
     width: 150px;
@@ -115,5 +117,11 @@
     width: 50px;
     height: 100px;
     margin-right: .25rem;
+}
+
+.hexagon-xsmall {
+    width: 25px;
+    height: 50px;
+    margin-right: .125rem;
 }
 </style>

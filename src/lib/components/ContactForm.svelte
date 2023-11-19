@@ -141,7 +141,7 @@
           {locale[lang].reason}
         </label>
         <div class="control has-icons-left">
-          <div class="select">
+          <div class="">
             <span class="subject">
               <select id="subject" name="subject" bind:value={subject} aria-invalid="false" disabled={loading || success}>
                 <option value="Shareholders Summit 2021">
@@ -188,7 +188,7 @@
         </div>
         <div class="control has-icons-left has-icons-right">
           <span class="name">
-            <input class="input required requiredField" type="text" id="name" name="name" size="40" aria-required="true" aria-invalid="false" placeholder="{locale[lang].your} {locale[lang].name}*" disabled={loading || success}>
+            <input class="required requiredField" type="text" id="name" name="name" size="40" aria-required="true" aria-invalid="false" placeholder="{locale[lang].your} {locale[lang].name}*" disabled={loading || success}>
           </span>
           <br>
           <span class="icon is-small is-left">
@@ -208,7 +208,7 @@
         </label>
         <div class="control has-icons-left has-icons-right">
           <span class="email">
-            <input class="input required requiredField" type="email" id="email" name="email" aria-required="true" aria-invalid="false" placeholder="{locale[lang].your} Email*" disabled={loading || success}>
+            <input class="required requiredField" type="email" id="email" name="email" aria-required="true" aria-invalid="false" placeholder="{locale[lang].your} Email*" disabled={loading || success}>
           </span>
           <br>
           <span class="icon is-small is-left">
@@ -225,7 +225,7 @@
         </label>
         <div class="control has-icons-left has-icons-right">
           <span class="telephone">
-            <input class="input" type="tel" pattern="[0-9]*" id="telephone" name="telephone" aria-invalid="false" placeholder="{locale[lang].your} {locale[lang].telephone}" disabled={loading || success}>
+            <input type="tel" pattern="[0-9]*" id="telephone" name="telephone" aria-invalid="false" placeholder="{locale[lang].your} {locale[lang].telephone}" disabled={loading || success}>
           </span>
           <span class="icon is-small is-left">
             <Fa icon={faPhone} />
