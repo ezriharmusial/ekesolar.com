@@ -1,5 +1,7 @@
 ---
 import { Accordion, AccordionItem, TableOfContents } from "@skeletonlabs/skeleton";
+import { Image } from "astro:assets";
+
 import Icon from "astro-icon";
 
 // 1. Get the slug from the incoming server request
@@ -20,7 +22,7 @@ const { pack, icon, title, subtitle } = Astro.props.page?.data || Astro.props.fr
 					</span>
 				</h2>
 
-				<img src="https://source.unsplash.com/random?african%20children" class="portrait:aspect-video landscape:aspect-auto object-cover rounded-xl !mt-0" alt="Layout Image">
+				<Image src="https://source.unsplash.com/random?african%20children" class="portrait:aspect-video landscape:aspect-auto object-cover rounded-xl !mt-0" alt="Layout Image">
 				{headings.length > 2 &&
 				<Accordion autocollapse="true" class="mt-8" client:only>
 					<AccordionItem open="true" class="bg-white/50 p-4 rounded-xl border-2 pr-4" regionCaret={"!mr-2"} client:only>

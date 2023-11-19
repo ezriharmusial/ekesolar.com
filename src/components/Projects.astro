@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { getCollection } from 'astro:content'
 import { getLangFromUrl, useTranslations } from '@content/i18n/utils';
 
@@ -18,41 +19,43 @@ const projects = await getCollection('projects')
 ---
 
 <section class="section">
-{projects &&
-  <div class="columns is-multiline">
-    <!-- iterate through each projectt -->
-    {projects.map((project) => (
-    <article class="column is-half is-one-third-widescren is-one-quarter-fullhd">
-      <a class="content" alt={"Read more on " + project.data.title} href={project.path}>
-        <h3 class="title">
-          {project.data.title}
-        </h3>
-        {project.data.subtitle &&
-        <h4 class="subtitle">
-          {project.data.subtitle}
-        </h4>
-        }
-        <figure class="is-relative">
-          <img
-          ratio={project.data.imageratio || "65%"}
-          src={"/images/alternative_energy/" + project.data.image }
-          alt={"Read more on " + project.data.title}
-          />
-          <figcaption class="content has-text-left">
-            <p class="subtitle has-text-white">
-              {project.data.hook}
-            </p>
-            <a href={"/" + lang + "/projects/" + project.slug } class="button is-fullwidth is-secondary">{ locale[lang].readmore }...</a>
-          </figcaption>
-        </figure>
-      </a>
-      <hr class="is-hidden-tablet has-background-secondary"/>
-    </article>
-    ))}
-  </div>
-}
-{!projects &&
-<span>Helaas hebben we nog geen Projecten online staan.</span>
-}
+  {projects &&
+    <div class="grid landscape:2xl:grid-cols-3 landscape:md:grid-cols-2 gap-4">
+      <!-- iterate through each projectt -->
+      {projects.map((project) => (
+        <article class="card card-hover variant-filled-primary my-4 ">
+            <header class="card-header">
+              <figure class="is-relative">
+                <Image
+                ratio={project.data.imageratio || "65%"}
+                src={"/images/alternative_energy/" + project.data.image }
+                alt={"Read more on " + project.data.title}
+                width="1920"
+                height="1080"
+                />
+              </figure>
+            </header>
+            <section class="p-4 content">
+              <h3 class="title">
+                {project.data.title}
+              </h3>
+              {project.data.subtitle &&
+                <h4 class="subtitle">
+                  {project.data.subtitle}
+                </h4>
+              }
+              <p class="subtitle has-text-white">
+                {project.data.hook}
+              </p>
+              <a href={"/" + lang + "/projects/" + project.slug.slice(3) } class="button is-fullwidth is-secondary">{ locale[lang].readmore }...</a>
+            </section>
+            <hr class="is-hidden-tablet has-background-secondary"/>
+        </article>
+        ))}
+      </div>
+    }
+    {!projects &&
+      <span>Helaas hebben we nog geen Projecten online staan.</span>
+    }
 
-</section>
+  </section>

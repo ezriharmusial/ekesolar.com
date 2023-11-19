@@ -5,8 +5,9 @@
   import Fa from 'svelte-fa';
   import { faUser, faEnvelope, faPhone, faBriefcase } from '@fortawesome/free-solid-svg-icons';
   import { blur } from "svelte/transition";
-  import { lang } from '@lib/i18n/language.js';
 
+  // Add default lang and pass lang argument
+  export const lang = "en"
   const locale = {};
 
   locale['en'] = {

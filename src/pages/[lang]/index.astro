@@ -7,7 +7,6 @@ import Image from "svelte-image";
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Share from '@lib/components/Share.svelte';
 import Projects from '@components/Projects.astro'
-import { lang } from '@lib/i18n/language'
 // import { url } from "@roxi/routify";
 
 import { getLangFromUrl, useTranslations } from '@content/i18n/utils';
@@ -164,7 +163,7 @@ locale['nl'] = {
             Powered by
             <a class="brand has-text-weight-bold is-italic has-text-shadow" href={"/" + lang + "/"}
               title="visit ArtKids Foundation Website?">
-              <img src="/artkids-logo-32.png" alt="Stichting ArtKids Foundation: Funding Happiness" width="24" height="24">
+              <Image src="/artkids-logo-32.png" alt="Stichting ArtKids Foundation: Funding Happiness" width="24" height="24">
               <span class="artkids has-text-danger">ArtKids</span><span
                 class="foundation has-text-secondary">foundation.org</span>
             </a>
@@ -172,7 +171,7 @@ locale['nl'] = {
           </div>
         </div>
         <div class="column is-two-fifths brand">
-          <Image client:only
+          <Image
           src="/images/alternative_energy/ekesolar-python-diagram.png"
           alt="Build Solar Plants"/>
           <p class="section is-size-4 is-hidden-tablet">
@@ -214,7 +213,7 @@ locale['nl'] = {
 
 <a href="/images/alternative_energy/energy-consumption-per-country.jpg" alt="Open Image">
   <figure class="has-background-dark">
-    <Image client:only  ratio="56%" src="/images/alternative_energy/energy-consumption-per-country.jpg" alt="{ locale[lang].home.fig.consumption.alt }" />
+    <Image client:only ratio="56%" src="/images/alternative_energy/energy-consumption-per-country.jpg" alt={ locale[lang].home.fig.consumption.alt } />
     <figcaption class="section">
       <div class="container content">
         <h3 class="title has-text-light">{ locale[lang].home.fig.consumption.caption }</h3>
@@ -247,7 +246,7 @@ locale['nl'] = {
 </div>
 
 <figure>
-  <Image client:only  ratio="56%" src="/images/alternative_energy/hydrovssolar.jpg" alt="{ locale[lang].home.fig.hydrosolar.alt }"/>
+  <Image client:only  ratio="56%" src="/images/alternative_energy/hydrovssolar.jpg" alt={ locale[lang].home.fig.hydrosolar.alt }/>
 </figure>
 
 <section class="section">
@@ -283,7 +282,7 @@ locale['nl'] = {
           <Image client:only
           ratio="70%"
           src="/images/alternative_energy/no-more-generators.jpg"
-          alt="{ locale[lang].home.fig.nomoregenerators.alt }" />
+          alt={ locale[lang].home.fig.nomoregenerators.alt } />
         </div>
       </div>
     </div>
@@ -294,7 +293,7 @@ locale['nl'] = {
 
 <a href="/images/alternative_energy/solar-power-world-map.jpg" alt="Open Image">
   <figure>
-    <Image client:only  ratio="60%" src="/images/alternative_energy/solar-power-world-map.jpg" alt="{ locale[lang].home.fig.hydrosolar.alt }"/>
+    <Image client:only  ratio="60%" src="/images/alternative_energy/solar-power-world-map.jpg" alt={ locale[lang].home.fig.hydrosolar.alt }/>
   </figure>
 </a>
 
@@ -312,7 +311,7 @@ locale['nl'] = {
         </div>
         <div class="column is-one-quarter">
           <figure class="image">
-            <Image client:only  src="/images/alternative_energy/ekesolar-logo.png" alt="EkeSolar Unlimited"/>
+            <Image src="/images/alternative_energy/ekesolar-logo.png" alt="EkeSolar Unlimited"/>
           </figure>
         </div>
       </div>

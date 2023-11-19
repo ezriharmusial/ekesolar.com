@@ -1,9 +1,20 @@
 ---
 import ContactForm from '@lib/components/ContactForm.svelte';
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'nl' } },
+  ];
+}
 ---
 
+
+<BaseLayout>
 <figure class="image is-2by1">
-    <img src="https://www.artkidsfoundation.org/app/uploads/2018/09/india-africa-summit-1366x683.jpg" alt="flags" width="1366" height="683">
+    <Image src="https://www.artkidsfoundation.org/app/uploads/2018/09/india-africa-summit-1366x683.jpg" alt="flags" width="1366" height="683">
     <figcaption>
         <div class="container is-italic has-text-shadow is-hidden-touch">
             <p class="title is-size-2-desktop is-size-5-touch has-text-white is-capitalized" style="background: rgba(113, 110, 106,0.8);">
@@ -19,6 +30,8 @@ import ContactForm from '@lib/components/ContactForm.svelte';
 
 <section class="section">
     <div class="container">
-        <ContactForm />
+        <!-- <ContactForm /> -->
     </div>
 </section>
+
+</BaseLayout>

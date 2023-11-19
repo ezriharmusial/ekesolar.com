@@ -2,6 +2,7 @@
 import Icon from "astro-icon";
 import { getCollection } from 'astro:content'
 import { getLangFromId, getLangFromUrl, useTranslations } from '~content/i18n/utils';
+import { Image } from "astro:assets";
 
 // 1. Get the slug from the incoming server request
 const { frontmatter, headings } = Astro.props;
@@ -66,7 +67,7 @@ const t = useTranslations(lang);
 							</header>
 							<section>
 								<figure class="aspect-video overflow-hidden">
-									<img src={project.data.image} class="bg-black/50 w-full object-fill" alt="Post">
+									<Image src={project.data.image} class="bg-black/50 w-full object-fill" alt="Post">
 								</figure>
 								</section>
 							<footer class="card-footer text-center p-4"><a href={"/" + project.slug.split('/')[0] + "/projects/" + project.slug.split('/')[1]} class="btn variant-filled-secondary rounded-full"> Read more...</a></footer>

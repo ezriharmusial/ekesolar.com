@@ -1,10 +1,11 @@
-<script>
+---
   import Fa from 'svelte-fa';
   import { faFacebook, faTwitter, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
-  import Image from "svelte-image";
+  import { Image } from "astro:assets";
 
   export let sectionClass = "";
-</script>
+---
+<div class="grid landscape:2xl:grid-cols-3 landscape:md:grid-cols-2 gap-4">
 
 <section class={sectionClass}>
   <h4 class="title">CEO: Ekesolar Unlimited</h4>
@@ -12,16 +13,18 @@
     <div class="card-image">
       <figure>
         <div class="dcll-bgwrap" style="background-color:#635c57;"></div>
-        <a href="/contact-us">
+        <div class="rounded-full -mt-1/2 mx-auto">
           <Image src="/images/alternative_energy/Ezehk-2.jpg"
             alt="Organize to Control"
+            width="300"
+            height="156"
             ratio="56%"/>
-        </a>
+        </div>
       </figure>
     </div>
     <div class="card-profile-image">
       <figure class="image is-128x128">
-        <Image src="/images/alternative_energy/Ezehk-1-7090-150x150.jpg" alt="" />
+        <Image src="/images/alternative_energy/Ezehk-1-7090-150x150.jpg" width={128} height={128} alt="" />
       </figure>
     </div>
     <div class="card-content content text-center has-text-light">
@@ -61,12 +64,15 @@
         <Image
           src="/images/alternative_energy/Biblequotes-Facebook-Shared-Image-Rastered-9-343x180.jpg"
           alt="No More BS"
+          width="343"
+          height="180"
           ratio="56%"/>
       </figure>
     </div>
     <div class="card-profile-image">
       <figure class="image is-128x128">
         <Image src="/images/alternative_energy/bas_profielfoto-150x150.jpg"
+               width={128} height={128}
                alt="Profielfoto Bas Bijleveld"/>
       </figure>
     </div>
@@ -104,13 +110,16 @@
       <figure>
         <div class="dcll-bgwrap" style="background-color:#779aa8;"></div>
         <Image src="/images/alternative_energy/Biblequotes-Facebook-Shared-Image-Rastered-343x180.jpg"
-               alt="Back to Nature"
-               ratio="56%"/>
+              alt="Back to Nature"
+              width="343"
+              height="180"
+              ratio="56%"/>
       </figure>
     </div>
     <div class="card-profile-image">
       <figure class="image is-128x128">
         <Image src="/images/alternative_energy/Ezri_0.jpg"
+          width={128} height={128}
           alt="Profielfoto Ezri" />
       </figure>
     </div>
@@ -147,16 +156,20 @@
     <div class="card-image">
       <figure>
         <div class="dcll-bgwrap" style="background-color:#635c57;"></div>
-        <a href="/contact-us">
+        <div class="rounded-full -mt-1/2 mx-auto">
           <Image src="/images/alternative_energy/Biblequotes-Facebook-Shared-Image-Rastered-2-343x180.jpg"
-            alt=""
+            alt="Shared"
+            width="343"
+            height="180"
             ratio="56%"/>
-        </a>
+        </div>
       </figure>
     </div>
     <div class="card-profile-image">
       <figure class="image is-128x128">
-        <Image src="/images/alternative_energy/chibundu_mmeri_victory.jpg" alt="" />
+        <Image
+        width={128} height={128}
+        src="/images/alternative_energy/chibundu_mmeri_victory.jpg" alt="Chibundu" />
       </figure>
     </div>
     <div class="card-content content text-center has-text-light">
@@ -182,17 +195,21 @@
     <div class="card-image">
       <figure>
         <div class="dcll-bgwrap" style="background-color:#635c57;"></div>
-        <a href="/contact-us">
+        <div class="rounded-full -mt-1/2 mx-auto">
           <Image
             src="/images/alternative_energy/Biblequotes-Facebook-Shared-Image-Rastered-3-343x180.jpg"
-            alt=""
+            width="343"
+            height="180"
+            alt="Off the Grid - On the Grid"
             ratio="56%"/>
-        </a>
+        </div>
       </figure>
     </div>
     <div class="card-profile-image">
       <figure class="image is-128x128">
-        <Image src="/images/alternative_energy/Mazi-Chidiebere-S-Oledibe.jpg" alt="" />
+        <Image
+        width={128} height={128}
+        src="/images/alternative_energy/Mazi-Chidiebere-S-Oledibe.jpg" alt="Mazi-Chidiebere" />
       </figure>
     </div>
     <div class="card-content content text-center has-text-light">
@@ -212,3 +229,4 @@
     </div>
   </div>
 </section>
+</div>
