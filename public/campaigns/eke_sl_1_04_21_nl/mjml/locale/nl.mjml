@@ -1,0 +1,175 @@
+<mjml>
+<mj-head>
+  <mj-attributes>
+    <mj-all color="#343a40" font-size="14px" font-weight="400" line-height="1.5" font-family="BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"></mj-all>
+  </mj-attributes>
+</mj-head>
+
+<mj-body background-color="#E1E8ED">
+  <mj-raw>
+    <!-- Header -->
+  </mj-raw>
+  <mj-section background-color="#0a0a0a">
+    <mj-column>
+      <mj-navbar base-url="https://ekesolar.com" hamburger="hamburger" ico-color="#ffffff">
+        <mj-navbar-link href="/" color="#ffffff">EkeSolar</mj-navbar-link>
+        <mj-navbar-link href="/#projects" color="#ffffff">Projecten</mj-navbar-link>
+        <mj-navbar-link href="/contact-us/" color="#ffffff">Contact</mj-navbar-link>
+      </mj-navbar>
+    </mj-column>
+  </mj-section>
+  <mj-section padding="0px">
+    <mj-image href="https://ekesolar.com" padding="0px" src="https://ekesolar.com/campaigns/eke_sl_1_04_21_nl/images/rural_ekesolar.jpg" alt="Rural Ekesolar"></mj-image>
+  </mj-section> 
+
+  <mj-section padding-bottom="0px" background-color="#fcfcfc">
+    <mj-text align="center">
+      Nederlands | <a href="https://ekesolar.com/campaigns/eke_sl_1_04_21_nl/locale/en.html" alt="View this letter in English">English</a>
+    </mj-text>
+    <mj-column width="500px">
+      <mj-image src="https://ekesolar.com/android-chrome-192x192.png" width="50px" height="50px"></mj-image>
+      <mj-text align="center" font-size="20px" color="grey" font-weight="500">
+        LANDELIJKE_AFRIKAANSE ZONNE ELEKTRIFICATIE PROJECTEN (RASELE PROJECTEN 2021) 
+      </mj-text>
+      <mj-divider horizontal-spacing="0" vertical-spacing="0" padding-top="20" padding-bottom="0px" padding-left="0px" padding-right="0px" border-width="1px" border-color="#f8f8f8"></mj-divider>
+    </mj-column>
+  </mj-section>
+  <mj-raw>
+    <!-- Article -->
+  </mj-raw>
+  <mj-section background-color="#fcfcfc">
+    <mj-column width="350px">
+      <mj-text align="left">
+        <p>
+        Datum: 14-04-2021<br />
+        Ref: eke/sl/#1/04/21/nl<br />
+        </p>
+        <p>
+        Ter attentie van de Directeur/Manager<br />
+<br />
+Geachte Heer/Mevrouw,<br />
+<br />
+In partnerschap met Artkids Holland, heeft EkeSolar Unlimited contracten getekend om alle bestaande Hydroelectrisch/Generator gedreven Waterpompen in Dorpen, Gemenschappen, Landgoederen, Fabrieken en Industrieen door heel Igboland in West Africa per 2025 te hebben vervangen met moderne Bronpompen op Zonne-energie.
+        </p>
+      </mj-text>
+      <mj-image padding="20px" href="https://ekesolar.com/projects/power-my-water/" padding="0px" src="https://ekesolar.com/campaigns/eke_sl_1_04_21_nl/images/sumo_example.jpg" alt="Sumo Example"></mj-image>
+      <mj-text align="left">
+        <p>
+        EkeSolar heeft uw bedrijf geselecteerd voor de levering en consulting gebaseerd op betrouwbare aanbevelingen van onze collega&#39;s in Nederland.<br />
+<br />
+Ekesolar Unlimited zou graag 3 bronpompen op Zonne Energie willen aanschaffen 3PK/4PK/5PK (en Hoger)<br />
+<br />
+Drie (3) Bronpompen op Zonne-energie als vervanging van oude pompen in drie (3) bestaande Bronnen.<br />
+<br />
+1. Umueke Central Bron<br />
+Diepte=100,6 meter (330ft)<br />
+Pijp Diameter=6&quot;<br />
+3.5PK/4PK<br />
+<br />
+2. Eshibenne Bron<br />
+Diepte=76,2 meter (250ft)<br />
+Pijp Diameter=5&quot;<br />
+3PK/3.5PK<br />
+<br />
+3. Ogonama Bron<br />
+Dept=70.104 meters (230ft)<br />
+Pijp Diameter=4.5&quot;<br />
+3PK/3.5PK<br />
+<br />
+Graag uw bevestiging of de bovenstaande producten beschikbaar zijn.<br />
+<br />
+Wij zien uit naar een spoedig antwoord.<br />
+<br />
+Was getekend:<br />
+
+        </p>
+      </mj-text>
+      <mj-column padding="0px" width="350px">
+        <mj-text>
+          <p>
+          Ezri Daniël Harmusial<br />
+          Director of International Business<br />
+          Tel: <a style="color:orange;" href="tel:+31628586335">+31 6 285 85 335</a><br />
+          Email: <a style="color:orange;" href="mailto:info@ekesolar.com" alt="">info@ekesolar.com</a><br />
+          Website: <a style="color:orange;" href="https://www.ekesolar.com" alt="EkeSolar Unlimited Website">www.ekesolar.com</a><br />
+          </p>
+        </mj-text>
+        <mj-image href="/contact-us/" padding="0px" src="https://ekesolar.com/campaigns/eke_sl_1_04_21_nl/images/contact-ezriharmusial.jpg" alt="Ezri Harmusial"></mj-image>
+      </mj-column>
+      <mj-column padding="0px" width="350px">
+        <mj-text>
+          <p>
+          Nkz. Ezekwesiri Enyinnaya Obioha (ICT)<br />
+          CEO: EkeSolar Unlimited<br />
+          Tel: <a style="color:orange;" href="tel:±2348075246200">±234 807 524 6200</a><br />
+          </p>
+        </mj-text>
+        <mj-image href="/contact-us/" padding="0px" src="https://ekesolar.com/campaigns/eke_sl_1_04_21_nl/images/contact-ezekwesiri-obioha.jpg" alt="Ezekwesiri Obioha"></mj-image>
+      </mj-column>
+    </mj-column>
+    <mj-column width="250px" background-color="white">
+      <mj-text color="orange" font-weight="500">PowerMyWater</mj-text>
+      <mj-image src="https://ekesolar.com/images/alternative_energy/solar-pump.jpg" alt="Lees meer: Power My Water (PMW)"></mj-image>
+      <mj-text color="grey">Verkoopt u bronbompen op zonne-energie ter vervanging van verouderde waterkracht- en fosielgestookte boorgaten?</mj-text>
+      <mj-button alt="Lees meer: PowerMyWater (PMW)" href="https://ekesolar.com/nl/projects/power-my-water" background-color="orange" color="white">Lees meer...</mj-button>
+
+      <mj-divider border-width="1px" border-color="orange"></mj-divider>
+
+      <mj-text color="orange" font-weight="500">BRIGHT NIGHT PROJECT (BNP)</mj-text>
+      <mj-image src="https://ekesolar.com/images/alternative_energy/solar-street-light.png" alt="Lees meer: BRIGHT NIGHT PROJECT (BNP)"></mj-image>
+      <mj-text color="grey">Verkoopt u Solar buitenverlichting, straatverlichting en floodlights?</mj-text>
+      <mj-button alt="Lees meer: BRIGHT NIGHT PROJECT (BNP)" href="https://ekesolar.com/nl/projects/bright-night-project" background-color="orange" color="white">Lees meer...</mj-button>
+
+      <mj-divider border-width="1px" border-color="orange"></mj-divider>
+
+      <mj-text color="orange" font-weight="500">PowerMyBiz (PMB)</mj-text>
+      <mj-image src="https://ekesolar.com/images/alternative_energy/power-my-bussiness.jpg" alt="Lees meer: PowerMyBiz (PMB)"></mj-image>
+      <mj-text>Laat EkeSolar Unlimited u verbinden met Afrikaanse business communities.</mj-text>
+      <mj-button alt="Lees meer: PowerMyBiz (PMB)" href="https://ekesolar.com/nl/projects/power-my-biz" background-color="orange" color="white">Lees meer...</mj-button>
+
+      <mj-divider border-width="1px" border-color="orange"></mj-divider>
+
+      <mj-text color="orange" font-weight="500">PowerMyCommunity (PMC)</mj-text>
+      <mj-image src="https://ekesolar.com/images/alternative_energy/power-my-communities.jpeg" alt="Lees meer: PowerMyCommunity (PMC)"></mj-image>
+      <mj-text>Partner met EkeSolar om positieve verandering te brengen op grote schaal.</mj-text>
+      <mj-button alt="Lees meer: PowerMyCommunity (PMC)" href="https://ekesolar.com/nl/projects/power-my-community" background-color="orange" color="white">Lees meer...</mj-button>
+
+      <mj-divider border-width="1px" border-color="orange"></mj-divider>
+
+      <mj-text color="orange" font-weight="500">PowerMyHome (PMH-Solar Generators)</mj-text>
+      <mj-image src="https://ekesolar.com/images/alternative_energy/power-households.jpg" alt="Lees meer: PowerMyHome (PMH-Solar Generators)"></mj-image>
+      <mj-text>Voorzie Afrikaanse Huizen van Zonne Energie Generators.</mj-text>
+      <mj-button alt="Lees meer: PowerMyHome (PMH-Solar Generators)" href="https://ekesolar.com/nl/projects/power-my-home" background-color="orange" color="white">Lees meer...</mj-button>
+
+      <mj-divider border-width="1px" border-color="orange"></mj-divider>
+
+      <mj-text color="orange" font-weight="500">PowerMyHospital (PMH)</mj-text>
+      <mj-image src="https://ekesolar.com/images/alternative_energy/power-my-hospital-header.jpg" alt="Lees meer: PowerMyHospital (PMH)"></mj-image>
+      <mj-text>Partner met EkeSolar Unlimited als wij verandering brengen in Afrikaanse ziekenhuizen met de kracht van zonne-energie!</mj-text>
+      <mj-button alt="Lees meer: PowerMyHospital (PMH)" href="https://ekesolar.com/nl/projects/power-my-hospital" background-color="orange" color="white">Lees meer...</mj-button>
+
+    </mj-column>
+
+  </mj-section>
+  <mj-raw>
+    <!-- Editor -->
+  </mj-raw>
+  <mj-section background-color="#0a0a0a">
+    <mj-column>
+      <mj-navbar base-url="https://ekesolar.com" hamburger="hamburger" ico-color="#ffffff">
+        <mj-navbar-link href="/" color="#ffffff">EkeSolar</mj-navbar-link>
+        <mj-navbar-link href="/#projects" color="#ffffff">Projecten</mj-navbar-link>
+        <mj-navbar-link href="/contact-us/" color="#ffffff">Contact</mj-navbar-link>
+      </mj-navbar>
+    </mj-column>
+  </mj-section>
+  <mj-section background-color="#f3f3f3">
+    <mj-column>
+      <mj-text align="center">
+        Nederlands | <a href="https://ekesolar.com/campaigns/eke_sl_1_04_21_nl/locale/en.html" alt="View this letter in English">English</a>
+      </mj-text>
+      <mj-text align="center">RASELE PROJECTEN 2021 worden mogelijk gemaakt door ArtKids Holland en EkeSolar Unlimited &amp; Partners.</mj-text>
+    </mj-column>
+  </mj-section>
+</mj-body>
+</mjml> 

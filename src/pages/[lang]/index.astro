@@ -1,0 +1,343 @@
+---
+import Fa from 'svelte-fa';
+import { faSun } from '@fortawesome/free-solid-svg-icons';
+import { faWeixin } from '@fortawesome/free-brands-svg-icons';
+import Image from "svelte-image";
+// import Meta from '@lib/components/Meta.svelte'
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Share from '@lib/components/Share.svelte';
+import Projects from '@components/Projects.astro'
+import { lang } from '@lib/i18n/language'
+// import { url } from "@roxi/routify";
+
+import { getLangFromUrl, useTranslations } from '@content/i18n/utils';
+const lang = getLangFromUrl(Astro.url)
+
+export async function getStaticPaths() {
+	return [
+	{ params: { lang: 'en' } },
+	{ params: { lang: 'nl' } },
+	];
+}
+  const locale = {}
+
+locale['en'] = {
+  code: "english",
+  readmore: "Read more",
+  downlad: "Download",
+  preview: "Preview",
+  visit: "Visit",
+  share_this: "Share This",
+  contact_us: "Contact Us",
+  home: {
+    title: "Join the _Solar Electrification of Africa",
+    subtitle: "EkeSolar is the initiative of ArtKids Intl. Corp. Holland which focuses on solving Africa's Electricity challenges.",
+    experts: {
+      call: "Calling on Solar Energy experts around the world!",
+      join: "Join hands in equipping Africa with constant solar electricity.",
+      interest: "It is interesting to inform you that many Africans have the needed fund (money) to purchase the Solar Energy and have their lives positively changed.",
+      logic: "Powering African homes, communities, businesses, industries, hospitals, entertainments, gadgets etc. with constant electricity supply is a logical and lucrative engagement.",
+      discover: "Discover our Business Projects",
+      joinproject: "Join a Business Project"
+    },
+    fig: {
+      consumption: {
+        alt: "Energy Consumption per Country",
+        caption: "Energy enpoverished countries have the greatest solar market growth potential in the World."
+      },
+      hydrosolar: {
+        alt: "The Challenge for Africa is to Replace Hydro with Solar"
+      },
+      nomoregenerators: {
+        alt: "Build Solar Plants"
+      }
+    },
+    specialist: {
+      question: "Are you a Solar or renewable energy specialist?",
+      looking: "We are looking for Solar Engr, Manufacturer, Marketer, financier etc.",
+      join: "Join ArtKids Holland through EKESOLAR UNLIMITED to equip Africa with Solar Energy with which to efficiently power their lives.",
+      represent: "EkeSolar Unlimited will like to represent and/or partner with your company on win-win business transactions. Welcome to Africa."
+    },
+    challenges:{
+      title: "Challenges",
+      why: "Why the inefficient Hydroelectricity supply here in Africa is negatively affecting lives and properties... The energy source used by African governments (hydroelectricity) has failed the people drastically; to the extent that electricity supply is rationed among demanding streets,  towns and businesses. Some communities have not seen the light for years.",
+      fuelordiesel: "Fuel or Diesel Generators_not a Solution",
+      result: "As a result of the above described shortcomings on the side of Hydroelectricity generation and supply which has so badly affected people's comfort, businesses, productions and life itself, the people resorted to self-service by purchasing Fuel or Diesel Generators to power their enterprises, hospitals and lives only to realise that fueling cost will affect business gains negatively. The Endless fueling and servicing of Generators has created poverty by rendering many moneyless and businesses; bankrupt.",
+      polution: "Environmental Pollution",
+      logic: "As you can logically imagine, the inefficiency of Hydroelectricity in Africa has left Africans and African business owners with only one option; Fuel and/or Diesel power generators with the anticipated ugly result of constant environmental pollution, excessive noise, high costs of maintenance and the ever danger of carbon monoxide inhalation."
+    },
+    solution: {
+      title: "#EkeSolar_is_the_Solution:",
+      know: "As you know, Africa is blessed with abundant Sun light which produces a renewable energy called Solar (Sun) Energy. This means that Africa needs Solar Energy more than the now used inefficient Hydroelectricity or the enslaving Fuel and Diesel powered Electric generators."
+    },
+    projects_title: "_Businness Projects"
+  }
+}
+
+locale['nl'] = {
+  code: "nederlands",
+  readmore: "Lees meer",
+  download: "Download",
+  preview: "Bekijk",
+  visit: "Bezoek",
+  share_this: "Deel Dit",
+  contact_us: "Contact",
+  home: {
+    title: "Maak deel uit van de _Zonne Electrificatie van Afrika",
+    subtitle: "EkeSolar is het initiatief van ArtKids Intl. Corp. Holland dat zich richt op het oplossen van de elektriciteitsproblemen in Afrika.",
+    experts: {
+      call: "Wij doen een beroep op zonne-energie experts over de hele wereld!",
+      join: "Sla de handen ineen om Afrika uit te rusten met constante zonne-energie.",
+      interest: "Het is interessant om te weten dat veel Afrikanen de benodigde fondsen hebben om de zonne-energie te kopen en hun leven positief te veranderen.",
+      logic: "Het is een logische en lucratieve aangelegenheid om Afrikaanse huizen, gemeenschappen, bedrijven, industrieën, ziekenhuizen etc. te voorzien met een constante elektriciteitsvoorziening.",
+      discover: "Ontdek onze Bussiness Projecten",
+      joinproject: "Neem Deel aan een Business Project"
+    },
+    fig: {
+      consumption: {
+        alt: "Energy Consumptie per Land",
+        caption: "Energy arme landen hebben het grootste zonne-energie markt groei potentieel in de Wereld."
+      },
+      hydrosolar: {
+        alt: "De uitdaging voor Afrika is om Hydro-energie te vangen door Zonne-energie"
+      },
+      nomoregenerators:
+      {
+        alt: "Bouw Zonne-energie centrales"
+      }
+    },
+    specialist: {
+      question: "Bent u een zonne-energie duurzame-energie specialist?",
+      looking: "Wij zijn opzoek naar Engr, Producenten, Marketeers, Financiers etc.",
+      join: "Vergezel ArtKids Holland via EKESOLAR UNLIMITED om Afrika te voorzien van Zonne-energie om hun levens efficient te bekrachtigen.",
+      represent: "EkeSolar Unlimited wil u graag representeren en/of partner worden met uw bedrijf op een win-win business transactie. Welkom in Afrika.",
+    },
+    challenges: {
+      title: "Uitdagingen",
+      why: "Waarom de inefficiente Hydro-energie voorzieningen in Afrika levens en eigendommen negatief beinvloeden... De energie bron gebruikt door Afrikaanse overheden (hydro-energie) is een catastrofe voor het volk; het is zelfs zo erg dat electriciteit wordt gerantsoeneerd onder vragende straten, steden en bedrijven. Sommige gemeenschappen hebben het licht niet gezien voor jaren.",
+      fuelordiesel: "Benzine of Diesel Generators_geen Oplossing",
+      result: "De gevolgen van de bovengenoemde tekortkomingen aan de kant van Hydro-energie voorzieningen zijn zichtbaar in het comfort van het volk, bedrijven, industrieën en het leven zelf. Nadat het volk het heft in eigen handen heeft genomen door zelfstandig Benzine of Diesel Generatoren aan te schaffen om hun ondernemingen, ziekenhuizen en levens te bekrachtigen, is de conclusie dat de brandstofkosten hun winst disproportioneel negatief beinvloedt. Dit eindeloos bijtanken en onderhouden van Generatoren heef armoede gecreerd door velen kaal te plukken van huishoudgeld en winsten. Bankroet!",
+      polution: "Vervuiling van de Omgeving",
+      logic: "Zoals u zich logischerwijs kan voorstellen, heeft de inefficiencie van Hydro-energie in Afrika voor Afrikanen en Afrikaanse bedrijfseigenaren meer directe negatieve gevolgen; Benzine en/of Diesel generatoren produceren naast de hoge kosten voor gebruik en onderhoud, constante omgevings vervuiling, geluidsoverlast, en het altijd aanwezige gevaar van koolstof mono-oxide vergiftiging."
+    },
+    solution: {
+      title: "#EkeSolar_is_de_Oplossing:",
+      know: "Zoals u weet, is Afrika gezegend met een overvloed aan Zonlicht, die een Duurzame bron vortbrengt Zonne-energie. Dit betekent dat Afrika Zonne-energie neer nodig heeft dan de nu gebruikte inefficiente Hydro-energie of de tot slaaf makende Benzine en Diesel generatoren."
+    },
+    projects_title: "_Businness Projecten"
+  }
+}
+
+    const metadata = {
+        title: locale[lang].home.title,
+        description: locale[lang].home.experts.call,
+        image: "https://ekesolar.com/images/alternative_energy/ekesolar-logo.png",
+        imageAlt: locale[lang].home.experts.call,
+        url: "https://ekesolar.com"
+      }
+---
+
+<!-- <Meta {metadata}/> -->
+<BaseLayout>
+
+
+<header class="hero is-bold is-dark">
+  <div class="section">
+    <div class="container">
+      <div class="columns is-vcentered is-multiline">
+        <div class="column is-three-fifths">
+          <div class="container content has-text-centered-mobile">
+            <h1 class="title is-size-2 has-text-weight-bold">
+              <span>
+                <span class="artkids has-text-info">Eke</span><span class="foundation has-text-success">Solar</span>
+                <span class="icon is-medium has-text-secondary">
+                  <Fa icon={faSun} />
+                </span>
+                Unlimited
+              </span>
+            </h1>
+            <h2 class="subtitle is-size-4">{ locale[lang].home.title }</h2>
+            <p class="is-size-4 is-hidden-mobile">
+            { locale[lang].home.subtitle }
+            </p>
+            <p class="logo has-text-right is-size-5">
+            Powered by
+            <a class="brand has-text-weight-bold is-italic has-text-shadow" href={"/" + lang + "/"}
+              title="visit ArtKids Foundation Website?">
+              <img src="/artkids-logo-32.png" alt="Stichting ArtKids Foundation: Funding Happiness" width="24" height="24">
+              <span class="artkids has-text-danger">ArtKids</span><span
+                class="foundation has-text-secondary">foundation.org</span>
+            </a>
+
+          </div>
+        </div>
+        <div class="column is-two-fifths brand">
+          <Image client:only
+          src="/images/alternative_energy/ekesolar-python-diagram.png"
+          alt="Build Solar Plants"/>
+          <p class="section is-size-4 is-hidden-tablet">
+          { locale[lang].home.subtitle }
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="image is-16by9 has-background-black">
+  <iframe id="player" class="is-overlay" data-embed="77HUdJ7Tij0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="https://www.youtube.com/embed/77HUdJ7Tij0?enablejsapi=1&amp;autoplay=0&amp;controls=0&amp;fs=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;origin=https%3A%2F%2Fekesolar.com&amp;widgetid=1" width="100%" height="100%" frameborder="0"></iframe>
+</div>
+
+<section class="hero is-bold is-dark">
+  <div class="section">
+    <div class="container content">
+      <h2 class="title">
+        { locale[lang].home.experts.call }
+      </h2>
+      <h3 class="subtitle">
+        { locale[lang].home.experts.join }
+      </h3>
+      <p>
+        { locale[lang].home.experts.interest }
+      <br class="is-hidden-tablet"/>
+      <br class="is-hidden-tablet"/>
+        { locale[lang].home.experts.logic }
+      </p>
+      <a class="button is-secondary" title="{ locale[lang].home.experts.joinproject }" href={"/" + lang + "/projects"}>
+        <span>
+          { locale[lang].home.experts.discover }
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<a href="/images/alternative_energy/energy-consumption-per-country.jpg" alt="Open Image">
+  <figure class="has-background-dark">
+    <Image client:only  ratio="56%" src="/images/alternative_energy/energy-consumption-per-country.jpg" alt="{ locale[lang].home.fig.consumption.alt }" />
+    <figcaption class="section">
+      <div class="container content">
+        <h3 class="title has-text-light">{ locale[lang].home.fig.consumption.caption }</h3>
+      </div>
+    </figcaption>
+  </figure>
+</a>
+
+<div class="hero is-bold is-black">
+  <section class="section">
+    <div class="container content">
+      <h2 class="title has-text-white">{ locale[lang].home.specialist.question }</h2>
+      <h3 class="subtitle">
+        { locale[lang].home.specialist.looking }
+      </h3>
+      <p>
+      { locale[lang].home.specialist.join }
+      <br class="is-hidden-tablet"/>
+      <br class="is-hidden-tablet"/>
+      { locale[lang].home.specialist.represent }
+      </p>
+      <a class="button is-secondary" title="Contact us!" href={'/contact-us'}>
+        <span class="icon">
+          <Fa icon={faWeixin} />
+        </span>
+        <span>{ locale[lang].contact_us }</span>
+      </a>
+    </div>
+  </section>
+</div>
+
+<figure>
+  <Image client:only  ratio="56%" src="/images/alternative_energy/hydrovssolar.jpg" alt="{ locale[lang].home.fig.hydrosolar.alt }"/>
+</figure>
+
+<section class="section">
+  <div class="container">
+    <div class="content">
+      <div class="columns is-multiline is-vcentered">
+        <div class="column is-full">
+          <h2 class="title">
+            #Solar_Africa: { locale[lang].home.challenges.title }
+          </h2>
+
+          <p class="is-size-5">
+            { locale[lang].home.challenges.why }
+          </p>
+        </div>
+        <div class="column is-half">
+          <div class="title is-size-5">
+            { locale[lang].home.challenges.fuelordiesel }
+          </div>
+          <p>
+            { locale[lang].home.challenges.result }
+          </p>
+          <div class="title is-size-5">
+            { locale[lang].home.challenges.polution }
+          </div>
+          <p>
+            { locale[lang].home.challenges.logic }
+          </p>
+
+        </div>
+        <div class="column is-half">
+
+          <Image client:only
+          ratio="70%"
+          src="/images/alternative_energy/no-more-generators.jpg"
+          alt="{ locale[lang].home.fig.nomoregenerators.alt }" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<Share />
+
+<a href="/images/alternative_energy/solar-power-world-map.jpg" alt="Open Image">
+  <figure>
+    <Image client:only  ratio="60%" src="/images/alternative_energy/solar-power-world-map.jpg" alt="{ locale[lang].home.fig.hydrosolar.alt }"/>
+  </figure>
+</a>
+
+<section class="section has-background-black">
+  <div class="container">
+    <div class="content">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <h2 class="title has-text-white">
+            { locale[lang].home.solution.title }
+          </h2>
+          <h3 class="subtitle has-text-white">
+            { locale[lang].home.solution.know }
+          </h3>
+        </div>
+        <div class="column is-one-quarter">
+          <figure class="image">
+            <Image client:only  src="/images/alternative_energy/ekesolar-logo.png" alt="EkeSolar Unlimited"/>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-secondary is-bold">
+  <div class="image is-16by9 has-background-black">
+    <iframe class="is-overlay" data-embed="5G-AojIVp6g" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="https://www.youtube.com/embed/5G-AojIVp6g?enablejsapi=0&amp;muted=1&amp;autoplay=0&amp;controls=0&amp;fs=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;origin=https%3A%2F%2Fekesolar.com&amp;widgetid=1" width="100%" height="100%" frameborder="0"></iframe>
+  </div>
+  <div class="section">
+    <div class="container has-text-centered has-text-shadow">
+      <h1 class="title is-size-2 has-text-weight-bold">
+        <span>
+          <span class="artkids has-text-info">Eke</span><span class="foundation has-text-success">Solar</span>
+          <span class="icon is-medium has-text-secondary">
+            <Fa icon={faSun} />
+          </span>
+          Africa
+        </span>
+      </h1>
+      <h2 id="projects" class="subtitle is-size-3 has-text-weight-bold">{ locale[lang].home.projects_title }</h2>
+    </div>
+  </div>
+</section>
+<Projects  />
+</BaseLayout>

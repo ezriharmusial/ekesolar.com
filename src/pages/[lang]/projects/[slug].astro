@@ -1,0 +1,103 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+import Fa from 'svelte-fa';
+import { faWeixin } from '@fortawesome/free-brands-svg-icons';
+// import Meta from '@lib/components/Meta.svelte'
+import Share from '@lib/components/Share.svelte';
+
+import { getLangFromUrl, useTranslations } from '@content/i18n/utils';
+const lang = getLangFromUrl(Astro.url)
+
+export async function getStaticPaths() {
+	const siteProjects = await getCollection('projects');
+	return siteProjects.map(project => {
+		const [lang, slug] = project.slug.split('/')
+		return {
+			params: { lang, slug: slug || undefined },
+			props: { project }
+		}
+	});
+}
+
+const { slug } = await Astro.params
+const project = await getEntry('projects', lang + "/" + slug);
+
+const locale = {};
+locale['en'] = {
+"contact_us": "Contact Us"
+}
+locale['nl'] = {
+"contact_us": "Contact"
+}
+
+console.log('project', lang + "/" + slug, project || 'Naaaeeh')
+
+---
+<!-- <Meta {metadata}/> -->
+<BaseLayout>
+<!-- display the project -->
+<header class="hero is-bold is-large is-black is-clipped">
+	<figure class="image is-overlay">
+		<img class="is-overlay"
+				 src={"/images/alternative_energy/" + (project.data.headerimage || project.data.image) }
+				 alt={project.data.imageAlt} />
+	</figure>
+	<div class="hero-body">
+		<div class="container">
+			<div class="columns is-vcentered">
+				<div class="column is-half">
+					<div class="section box has-background-black ">
+						<h1 class="title">
+							{project.data.title}
+						</h1>
+						<p class="subtitle is-size-4">
+						{project.data.hook}
+						</p>
+						<a class="button is-secondary" title="Contact us!" href="/{lang}/contact-us/">
+							<span class="icon">
+								<Fa icon={faWeixin} />
+							</span>
+							<span>{ locale[lang]['contact_us'] }</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<section class="section">
+	<div class="container content">
+		<div class="columns is-multiline">
+			<div class="column is-three-fifths mx-auto ">
+				<h2 class="title">{project.data.title}</h2>
+				{ project.data.subtitle &&
+					<h3 class="subtitle">{project.data.subtitle}</h3>
+				}
+				<div class="prose max-w-none prose-stone landscape:w-1/2 landscape:xl:w-3/4 space-y-6 prose-table:table-auto prose-p:text-xl prose-p:text-secondary-800-100-token prose-headings:text-secondary-800-100-token">
+
+				{ project.body }
+				</div>
+				<!-- <slot /> -->
+				<a class="button is-secondary" href="/{lang}/contact-us/" title="Contact Us">
+					<span class="icon">
+						<Fa icon={faWeixin} />
+					</span>
+					<span>{ locale[lang]['contact_us'] }</span>
+				</a>
+			</div>
+			<div class="column">
+				<figure class="image">
+					<img
+					src={"/images/alternative_energy/" + project.data.image}
+					alt={project.data.imageAlt} />
+				</figure>
+			</div>
+		</div>
+	</div>
+</section>
+
+<Share />
+</BaseLayout>

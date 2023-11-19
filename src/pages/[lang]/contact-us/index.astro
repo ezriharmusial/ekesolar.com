@@ -1,0 +1,195 @@
+<svelte:head>
+    <title>Contact EkeSolar Unlimited near You.</title>
+    <meta property="og:title" content="Engage in the _Solar Electrification of Africa" />
+    <meta property="og:description" content="EkeSolar Unlimited is changing lives by providing Solar Energy Technologies &amp;Solutions to
+    African homes, businesses, Industries and Educational institutions." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ekesolar.com/" />
+    <meta property="og:site_name" content="EkeSolar Unlimited" />
+    <meta name="twitter:title" content="Engage in the _Solar Electrification of Africa" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="EkeSolar Unlimited is changing lives by providing Solar Energy Technologies &amp;Solutions to African homes, businesses, Industries and Educational institutions." />
+    <meta name="twitter:url" content="https://ekesolar.com/" />
+    <meta property="og:image"
+          content="https://ekesolar.com/images/alternative_energy/Access-Poweru2019s-solar-plant-in-Ugandau2019s-Soroti-District-producing-50GW-a-year-is-the-largest-of-its-kind-in-East-Africa-1280x720.jpg" />
+    <meta property="og:image:alt" content="_Solar Electrification of Africa Power to the People" />
+    <meta name="og:image:width" content="1280" />
+    <meta name="og:image:height" content="720" />
+    <meta name="twitter:image"
+          content="https://ekesolar.com/images/alternative_energy/Access-Poweru2019s-solar-plant-in-Ugandau2019s-Soroti-District-producing-50GW-a-year-is-the-largest-of-its-kind-in-East-Africa-1280x720.jpg" />
+</svelte:head>
+<script>
+    import Fa from 'svelte-fa';
+    import { faEnvelope, faPhone} from '@fortawesome/free-solid-svg-icons';
+    import { faClock } from '@fortawesome/free-regular-svg-icons';
+    import { faWeixin } from '@fortawesome/free-brands-svg-icons';
+    import Image from "svelte-image";
+    import ContactForm from '@lib/components/ContactForm.svelte';
+    import Contacts from '@lib/components/Contacts.svelte';
+    import { lang } from '@lib/i18n/language';
+
+    const locale = {};
+    locale['en'] = {
+        "call": "Call",
+        "help": "How can we Help?",
+        "response": "Response",
+        "direct": "Direct",
+        "within a day": "within a Day",
+        "want to write": "Do you want to wright us? Well you Can! You can reach us through email too.",
+        "send an email": "Send an Email",
+        "projects in europe": "For Projects and Bussiness in Europe Please call for direct Response.",
+        "projects in africa": "For Projects and Bussiness in Africa Please call for direct Response.",
+        "contacting ekesolar": "Contacting EkeSolar Unlimited",
+        "digitally connected": "digitally connected"
+    }
+
+    locale['nl'] = {
+        "call": "Bel",
+        "help": "Hoe kunnen we helpen?",
+        "response": "Reactie",
+        "direct": "Direct",
+        "within a day": "binnen een Dag",
+        "want to write": "Wil je ons Schrijven? Dat kan! U kunt ons ook Emailen.",
+        "send an email": "Stuur een Email",
+        "projects in europe": "Voor Projecten en Zaken in Europa, Bel ons voor direct Contact.",
+        "projects in africa": "Voor Projecten en Zaken in Afrika, Bel ons voor direct Contact.",
+        "contacting ekesolar": "Contacteer EkeSolar Unlimited",
+        "digitally connected": "digitaal verbonden"
+     }
+
+</script>
+
+<header class="hero is-bold is-medium is-black">
+    <div class="hero-image">
+        <Image src="/images/alternative_energy/contact-page.jpg"
+               alt="Build Solar Plants"
+               ratio="39%" />
+    </div>
+</header>
+<section class="container">
+    <div class="columns">
+        <aside class="section main column is-one-third content is-boxed">
+            <div class="columns is-multiline">
+
+                <div class="column is-full">
+                    <h3 class="has-text-calm">
+                        <span class="icon">
+                            <Fa icon={faWeixin} />
+                        </span>
+                        <span class="is-size-4">{ locale[lang].help }</span>
+                    </h3>
+                </div>
+
+                <div class="column is-full">
+                    <div class="card">
+                        <div class="card-header">
+                            <p class="card-header-title">
+                                <span class="icon">
+                                    <Fa icon={faEnvelope} />
+                                </span>
+                                <span>Email EkeSolar Unlimited</span>
+                            </p>
+                        </div>
+                        <div class="card-content">
+                            <p>{ locale[lang]['want to write'] }</p>
+                            <small class="has-text-calm is-size-7">
+                                <span class="icon">
+                                    <Fa icon={faClock}/>
+                                </span>
+                                <span>{ locale[lang].response } { locale[lang]['within a day'] }</span>
+                            </small>
+                        </div>
+                        <div class="card-footer">
+                            <a href="mailto:info@ekesolar.com" class="button is-info is-fullwidth">
+                                <span class="icon">
+                                    <Fa icon={faEnvelope} />
+                                </span>
+                                <span>{ locale[lang]['send an email'] }</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-full">
+                    <div class="card">
+                        <div class="card-header">
+                            <p class="card-header-title">
+                                <span class="icon">
+                                    <Fa icon={faPhone} />
+                                </span>
+                                <span>{ locale[lang]['call']} EkeSolar Europe</span>
+                            </p>
+                        </div>
+                        <div class="card-content">
+                            <p>{ locale[lang]['projects in europe'] }</p>
+                            <small class="has-text-calm is-size-7">
+                                <span class="icon">
+                                    <Fa icon={faClock} />
+                                </span>
+                                <span>Respons direct</span>
+                            </small>
+                        </div>
+                        <div class="card-footer">
+                            <a href="tel:+31 (0)6 285 86 335" class="button is-info is-fullwidth">
+                                <span class="icon">
+                                    <Fa icon={faPhone} />
+                                </span>
+                                <span>{ locale[lang]['call']} EkeSolar Europe</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-full">
+                    <div class="card">
+                        <div class="card-header">
+                            <p class="card-header-title">
+                                <span class="icon">
+                                    <Fa icon={faPhone} />
+                                </span>
+                                <span>{ locale[lang]['call']} EkeSolar Africa</span>
+                            </p>
+                        </div>
+                        <div class="card-content">
+                            <p>{ locale[lang]['projects in africa'] }</p>
+                            <small class="has-text-calm is-size-7">
+                                <Fa icon={faClock}/>
+                                <span>Respons direct</span>
+                            </small>
+                        </div>
+                        <div class="card-footer">
+                            <a href="tel:+234 8148487427" class="button is-info is-fullwidth">
+                                <span class="icon">
+                                    <Fa icon={faPhone} />
+                                </span>
+                                <span>{ locale[lang]['call']} EkeSolar Africa</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </aside>
+        <main class="section column is-two-thirds content">
+           <div class="columns is-multiline">
+                <div class="column is-full">
+                    <h3>
+                        <span class="icon">
+                            <Fa icon={faWeixin} />
+                        </span>
+                        <span>{ locale[lang]['contacting ekesolar'] }</span>
+                        <span class="has-text-calm is-size-4"> { locale[lang]['digitally connected'] }</span>
+                    </h3>
+                </div>
+                <div class="column is-full">
+                    <section class="section box">
+                         <div class="container">
+                             <ContactForm />
+                         </div>
+                    </section>
+                </div>
+                <Contacts sectionClass="column is-half"/>
+            </div>
+        </main>
+    </div>
+</section>
