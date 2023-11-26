@@ -1,8 +1,10 @@
 ---
 title: PowerMyCommunity (PMC)
-image: power-my-communities.jpeg
+pack: teenyicons
+icon: desklamp-outline
+image: /images/alternative_energy/power-my-communities.jpeg
 imageratio: 65%
-headerimage: large-scale-rural.jpg
+headerImage: /images/alternative_energy/large-scale-rural.jpg
 hook: Join EkeSolar to bring positive change in a large scale.
 date: 11-12-2020
 ---

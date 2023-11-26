@@ -1,7 +1,7 @@
 ---
 title: PowerMyWater (PMW-Solar Water-pumps)
-image: solar-pump.jpg
-headerimage: solar-agricultural-pumps.jpg
+image: /images/alternative_energy/solar-pump.jpg
+headerImage: /images/alternative_energy/solar-agricultural-pumps.jpg
 hook: "Verkoopt u bronbompen op zonne-energie als alternatief op Hydroelectrische- en Fosielebrandstof aangedreven bronpompen?"
 date: 11-12-2020
 ---

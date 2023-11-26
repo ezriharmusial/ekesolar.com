@@ -1,7 +1,7 @@
 ---
 title: PowerMyIndustry (PMI)
-image: power-my-industry.jpg
-headerimage: solar-industries-automated.jpg
+image: /images/alternative_energy/power-my-industry.jpg
+headerImage: /images/alternative_energy/solar-industries-automated.jpg
 hook: Word een industriële leverancier en / of consultant voor EkeSolar Unlimited.
 date: 11-12-2020
 ---

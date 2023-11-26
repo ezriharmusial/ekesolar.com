@@ -1,8 +1,8 @@
 ---
 title: PowerMyCommunity (PMC)
-image: power-my-communities.jpeg
+image: /images/alternative_energy/power-my-communities.jpeg
 imageratio: 65%
-headerimage: large-scale-rural.jpg
+headerImage: /images/alternative_energy/large-scale-rural.jpg
 hook: Sluit je aan bij EkeSolar om positieve verandering op grote schaal te brengen
 date: 11-12-2020
 ---

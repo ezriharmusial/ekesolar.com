@@ -5,7 +5,7 @@ username: Bas Bijleveld
 name: Bas
 surname: Bijleveld
 jobtitle:
-image: /images/manifest/pwa-192x192.png
-background-image: /images/manifest/pwa-192x192.png
+image: /images/alternative_energy//images/manifest/pwa-192x192.png
+background-image: /images/alternative_energy//images/manifest/pwa-192x192.png
 ---
 P﻿romoter

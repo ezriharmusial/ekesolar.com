@@ -1,7 +1,9 @@
 ---
 title: PowerMyIndustry (PMI)
-image: power-my-industry.jpg
-headerimage: solar-industries-automated.jpg
+pack: teenyicons
+icon: cog-outline
+image: /images/alternative_energy/power-my-industry.jpg
+headerImage: /images/alternative_energy/solar-industries-automated.jpg
 hook: Become an industrial supplier and/or consultant for EkeSolar Unlimited!
 date: 11-12-2020
 ---

@@ -4,6 +4,6 @@ sex: male
 username: EzzyHarmless
 name: Ezri
 surname: Harmusial
-image: /images/manifest/pwa-192x192.png
+image: /images/alternative_energy//images/manifest/pwa-192x192.png
 ---
 I am Lead Web-developer and Graphical Artist at LastMessengerS Project.

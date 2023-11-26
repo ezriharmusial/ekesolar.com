@@ -7,6 +7,8 @@ import '@styles/app.postcss';
 import '../../public/fonts/starife.css';
 
 
+import BrandFlag from "./BrandFlag.astro";
+
 import { AppShell, AppBar } from '@skeletonlabs/skeleton'
 import { useUserAgent } from "astro-useragent";
 // import { Image } from "astro:assets";
@@ -68,6 +70,7 @@ const { title, icon, pack, seoTitle, description, image, imageAlt } = (Astro.pro
     <AppShell slotSidebarLeft="bg-secondary-400 h-screen portrait:pb-24 portrait:absolute portrait:left-0 portrait:top-0 portrait:bottom-0 z-20">
         <svelte:fragment slot="pageHeader">
             <AppBar background="z-10 portrait:fixed landscape:sticky top-0 left-0 right-0 w-full bg-secondary-100 backdrop-blur">
+                {!title ?
                 <svelte:fragment slot="lead">
                     <a class="marker flex flex-shrink h-full w-full font-sans justify-center items-center !no-underline drop-shadow hover:text-yellow-400 dark:focus:text-gray-100 px-2 py-4" href="/">
                         <h1 class="unstyled flex items-center gap-1 transition-colors duration-500 text-left font-light text-4xl uppercase leading-7 hover:text-yellow-400 dark:focus:text-gray-100 h-2">
@@ -82,7 +85,12 @@ const { title, icon, pack, seoTitle, description, image, imageAlt } = (Astro.pro
                     </h1>
                 </a>
                 </svelte:fragment>
-                <PageTitle title={title} pack={pack} icon={icon} />
+                :
+                <figure class="landscape:opacity-0 image -translate-x-1 h-12 transition-all duration-500 m-0 p-0 w-12 -ml-1">
+                    <BrandFlag logoOnly={true} ></BrandFlag>
+                </figure>
+                }
+            <PageTitle title={title} pack={pack} icon={icon} />
                 <svelte:fragment slot="trail">
                     <!-- User Avatar Placeholder -->
                 </svelte:fragment>

@@ -1,8 +1,8 @@
 ---
 title: PowerMyHome (PMH-Solar Generators)
-image: power-households.jpg
+image: /images/alternative_energy/power-households.jpg
 imageratio: 65%
-headerimage: power-my-home.jpeg
+headerImage: /images/alternative_energy/power-my-home.jpeg
 hook: Voorzie Afrikaanse huizen van draagbare alles-in-één zonne-energie systemen!
 date: 11-12-2020
 ---

@@ -1,8 +1,8 @@
 ---
 title: PowerMyHospital (PMH)
-image: power-my-hospital-header.jpg
+image: /images/alternative_energy/power-my-hospital-header.jpg
 imageratio: 65%
-headerimage: power-my-hospital.jpg
+headerImage: /images/alternative_energy/power-my-hospital.jpg
 hook: Partner met EkeSolar Unlimited als wij verandering brengen in Afrikaanse ziekenhuizen met de kracht van zonne-energie!
 date: 11-12-2020
 ---

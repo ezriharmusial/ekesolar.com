@@ -1,9 +1,9 @@
 ---
 title: BRIGHT NIGHT PROJECT (BNP)
 subtitle: Outdoor Zonne-verlichtings oplossingen
-image: solar-street-light.png
+image: /images/alternative_energy/solar-street-light.png
 imageratio: 65%
-headerimage: bright-night-header-image.jpg
+headerImage: /images/alternative_energy/bright-night-header-image.jpg
 hook: Handelt u in zonne-buitenlampen, straatverlichting en schijnwerpers?
 date: 11-12-2020
 ---

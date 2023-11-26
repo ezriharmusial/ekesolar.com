@@ -286,7 +286,7 @@
       <div class="notification is-success" transition:blur>
         <button class="delete" on:click={reset}></button>
         <p><b>{ locale[lang].thankyou }</b></p>
-        <p>{ locale[lang].confirmation }<a href="/contact-us/" title="relaod form" on:click|preventDefault={reset}>{ locale[lang].register }</a> { locale[lang].someone }someone Else</p>
+        <p>{ locale[lang].confirmation }<a href={"/" + lang + "/contact-us/"} title="relaod form" on:click|preventDefault={reset}>{ locale[lang].register }</a> { locale[lang].someone }someone Else</p>
       </div>
     {/if}
   </div>

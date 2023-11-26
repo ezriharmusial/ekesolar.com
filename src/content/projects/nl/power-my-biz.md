@@ -1,8 +1,8 @@
 ---
 title: PowerMyBiz (PMB)
-image: power-my-bussiness.jpg
+image: /images/alternative_energy/power-my-bussiness.jpg
 imageratio: 65%
-headerimage: power-my-bussiness-community.jpg
+headerImage: /images/alternative_energy/power-my-bussiness-community.jpg
 hook: Laat EkeSolar Unlimited u verbinden met het Afrikaanse bedrijfsleven
 date: 11-12-2020
 ---

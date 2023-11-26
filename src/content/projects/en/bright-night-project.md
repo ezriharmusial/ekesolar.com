@@ -1,9 +1,11 @@
 ---
-title: BRIGHT NIGHT PROJECT (BNP)
+title: Bright Night Project (BNP)
+pack: teenyicons
+icon: bulb-on-outline
 subtitle: Outdoor Solar Solutions
-image: solar-street-light.png
+image: /images/alternative_energy/solar-street-light.png
 imageratio: 65%
-headerimage: bright-night-header-image.jpg
+headerImage: /images/alternative_energy/bright-night-header-image.jpg
 hook: Do you deal on outdoor Solar lamps, street lights and floodlights?
 date: 11-12-2020
 ---

@@ -1,8 +1,10 @@
 ---
 title: PowerMyHome (PMH-Solar Generators)
-image: power-households.jpg
+pack: teenyicons
+icon: home-outline
+image: /images/alternative_energy/power-households.jpg
 imageratio: 65%
-headerimage: power-my-home.jpeg
+headerImage: /images/alternative_energy/power-my-home.jpeg
 hook: Supply African homes with portable all-in-one Solar Energy generators!
 date: 11-12-2020
 ---

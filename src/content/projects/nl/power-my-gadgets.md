@@ -1,8 +1,8 @@
 ---
 title: PowerMyGadgets (PMG)
-image: solar-charge-unit.jpg
+image: /images/alternative_energy/solar-charge-unit.jpg
 imageratio: 65%
-headerimage: power-my-gadgets.jpg
+headerImage: /images/alternative_energy/power-my-gadgets.jpg
 hook: Word een internationale partner om onze EkeSolar Charging Interface tot bloei te brengen!
 date: 11-12-2020
 ---

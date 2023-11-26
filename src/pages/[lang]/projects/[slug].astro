@@ -38,12 +38,12 @@ locale['nl'] = {
 
 ---
 <!-- <Meta {metadata}/> -->
-<BaseLayout>
+<BaseLayout title={project?.data.title} image={project?.data.headerImage} pack={project?.data.pack} icon={project?.data.icon}>
 <!-- display the project -->
-<header class="hero is-bold is-large is-black is-clipped">
+<header class="hero is-bold is-black is-clipped">
 	<figure class="image is-overlay">
-		<Image class="is-overlay"
-				 src={"/images/alternative_energy/" + (project.data.headerimage || project.data.image) }
+		<Image class="is-overlay object-cover"
+				 src={(project.data.headerimage || project.data.image) }
 				 alt={project.data.imageAlt || "Primary African Energy"} width={1920} height={1080}/>
 	</figure>
 	<div class="hero-body">
@@ -93,7 +93,7 @@ locale['nl'] = {
 			<div class="column">
 				<figure class="image">
 					<Image
-					src={"/images/alternative_energy/" + project.data.image}
+					src={project.data.image}
 					alt={project.data.imageAlt || "Primary African Energy"} width={1920} height={1080} />
 				</figure>
 			</div>

@@ -1,8 +1,10 @@
 ---
   title: PowerMyHospital (PMH)
-  image: power-my-hospital-header.jpg
+  pack: teenyicons
+  icon: hospital-outline
+  image: /images/alternative_energy/power-my-hospital-header.jpg
   imageratio: 65%
-  headerimage: power-my-hospital.jpg
+  headerImage: /images/alternative_energy/power-my-hospital.jpg
   hook: Join EkeSolar Unlimited as we bring Change to Africa's hospitals with Solar Energy!
   date: 11-12-2020
 ---
