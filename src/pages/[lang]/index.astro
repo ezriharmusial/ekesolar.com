@@ -2,7 +2,7 @@
 import Fa from 'svelte-fa';
 import { faSun } from '@fortawesome/free-solid-svg-icons';
 import { faWeixin } from '@fortawesome/free-brands-svg-icons';
-import Image from "svelte-image";
+import { Image } from "astro:assets";
 // import Meta from '@lib/components/Meta.svelte'
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Share from '@lib/components/Share.svelte';
@@ -175,7 +175,7 @@ locale['nl'] = {
         <div class="column is-two-fifths brand">
           <Image
           src="/images/alternative_energy/ekesolar-python-diagram.png"
-          alt="Build Solar Plants"/>
+          alt="Build Solar Plants" width={640} height={640} />
           <p class="section is-size-4 is-hidden-tablet">
           { locale[lang].home.subtitle }
           </p>
@@ -215,7 +215,7 @@ locale['nl'] = {
 
 <a href="/images/alternative_energy/energy-consumption-per-country.jpg" alt="Open Image">
   <figure class="has-background-dark">
-    <Image client:only ratio="56%" src="/images/alternative_energy/energy-consumption-per-country.jpg" alt={ locale[lang].home.fig.consumption.alt } />
+    <Image width={1920} height={1080} ratio="56%" src="/images/alternative_energy/energy-consumption-per-country.jpg" alt={ locale[lang].home.fig.consumption.alt } />
     <figcaption class="section">
       <div class="container content">
         <h3 class="title has-text-light">{ locale[lang].home.fig.consumption.caption }</h3>
@@ -248,7 +248,7 @@ locale['nl'] = {
 </div>
 
 <figure>
-  <Image client:only  ratio="56%" src="/images/alternative_energy/hydrovssolar.jpg" alt={ locale[lang].home.fig.hydrosolar.alt }/>
+  <Image client:only width={1920} height={1080} ratio="56%" src="/images/alternative_energy/hydrovssolar.jpg" alt={ locale[lang].home.fig.hydrosolar.alt }/>
 </figure>
 
 <section class="section">
@@ -281,7 +281,9 @@ locale['nl'] = {
         </div>
         <div class="column is-half">
 
-          <Image client:only
+          <Image
+          width={500}
+          height={350}
           ratio="70%"
           src="/images/alternative_energy/no-more-generators.jpg"
           alt={ locale[lang].home.fig.nomoregenerators.alt } />
@@ -295,7 +297,7 @@ locale['nl'] = {
 
 <a href="/images/alternative_energy/solar-power-world-map.jpg" alt="Open Image">
   <figure>
-    <Image client:only  ratio="60%" src="/images/alternative_energy/solar-power-world-map.jpg" alt={ locale[lang].home.fig.hydrosolar.alt }/>
+    <Image width={1920} height={1080} ratio="60%" src="/images/alternative_energy/solar-power-world-map.jpg" alt={ locale[lang].home.fig.hydrosolar.alt }/>
   </figure>
 </a>
 
@@ -313,7 +315,7 @@ locale['nl'] = {
         </div>
         <div class="column is-one-quarter">
           <figure class="image">
-            <Image src="/images/alternative_energy/ekesolar-logo.png" alt="EkeSolar Unlimited"/>
+            <Image height={640} width={640} src="/images/alternative_energy/ekesolar-logo.png" alt="EkeSolar Unlimited"/>
           </figure>
         </div>
       </div>

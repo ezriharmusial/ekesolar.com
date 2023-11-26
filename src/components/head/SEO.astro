@@ -1,5 +1,5 @@
 ---
-import { SITE_DESCRIPTION, SITE_TITLE } from '~consts';
+import { SITE_URL, SITE_DESCRIPTION, SITE_TITLE, SITE_TITLE_POSTFIX } from '~consts';
 
 export interface Props {
 	title: string;
@@ -14,14 +14,16 @@ const { title, seoTitle, description, image, imageAlt, fbappid } = Astro.props
 
 // Catch Image Url Inconsistencies
 function imageUrl(image) {
+
 	if (image) {
-		console.log('image', image)
-		return "https://artkidsfoundation.org" + image
+		if (image.indexOf("/") == 0)
+			return SITE_URL + image
+		else
+			return image
 	}
 	else {
-		return "https://artkidsfoundation.org" + "/logo-512.png"
+		return SITE_URL + "/images/alternative_energy/ekesolar-logo.png"
 	}
-	return true;
 }
 
 const canonicalURL = Astro.url.origin + Astro.url.pathname;
@@ -35,23 +37,23 @@ const canonicalURL = Astro.url.origin + Astro.url.pathname;
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
 
-<title>{SITE_TITLE + title || "Welkom to ArtKidsFoundation.org"}</title>
+<title>{title ? title + SITE_TITLE_POSTFIX : SITE_TITLE + SITE_TITLE_POSTFIX}</title>
 <meta name="robots" content="index,follow">
 <meta name="description" content={description || SITE_DESCRIPTION}>
 <!-- Facebook OpenGraph -->
 <meta property="fb:app_id" content={fbappid}/>
-<meta property="og:title" content={title || "Welkom to ArtKidsFoundation.org"}>
+<meta property="og:title" content={title || "Welkom to ekesolar.com"}>
 <meta property="og:description" content={description || SITE_DESCRIPTION}>
 <meta property="og:url" content={canonicalURL}>
 <meta property="og:type" content="website">
 <meta property="og:image" content={imageUrl(image)}>
 <meta property="og:locale" content="en_EN">
-<meta property="og:site_name" content="ArtKidsFoundation.org">
+<meta property="og:site_name" content="ekesolar.com">
 <link rel="canonical" href={canonicalURL}>
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:title" content={title || "Welkom to ArtKidsFoundation.org"}>
-<meta property="twitter:description" content={description || "Welkom to ArtKidsFoundation.org"}>
+<meta property="twitter:title" content={title || "Welkom to ekesolar.com"}>
+<meta property="twitter:description" content={description || "Welkom to ekesolar.com"}>
 <meta property="twitter:image" content={imageUrl(image)}>
 
 <!-- Manifest Files -->
