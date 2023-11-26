@@ -28,7 +28,7 @@ const projects = await getCollection('projects')
               <figure class="is-relative">
                 <Image
                 ratio={project.data.imageratio || "65%"}
-                src={"/images/alternative_energy/" + project.data.image }
+                src={project.data.image }
                 alt={"Read more on " + project.data.title}
                 width="1920"
                 height="1080"
