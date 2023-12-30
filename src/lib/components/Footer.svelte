@@ -38,7 +38,7 @@
         <div class="columns content">
 
           <section class="widget content column text-3 widget_text">
-            <h3 class="subtitle has-text-secondary is-italic">{locale[lang].title}</h3>
+            <h3 class="subtitle text-secondary-400 italic">{locale[lang].title}</h3>
             <div class="textwidget">
               <p>{locale[lang].gotquestions}</p>
               <p>
@@ -70,11 +70,11 @@
         </div>
         <div class="level">
           <p class="logo level-right">
-            Powered by <a class="brand has-text-weight-bold is-italic has-text-shadow" href="/" title="visit ArtKids Foundation Website?">
+            Powered by <a class="brand font-bold italic drop-shadow" href="/" title="visit ArtKids Foundation Website?">
                         <span class="icon is-medium">
                           <img src="/artkids-logo-32.png" alt="Stichting ArtKids Foundation: Funding Happiness" width="24" height="24">
                         </span>
-                        <span class="artkids has-text-danger is-size-5">ArtKids</span><span class="foundation has-text-secondary is-size-5">foundation.org</span>
+                        <span class="artkids has-text-danger ">ArtKids</span><span class="foundation text-secondary-400 ">foundation.org</span>
                       </a>
           </p>
         </div>

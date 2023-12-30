@@ -5,7 +5,7 @@
 <svelte:head>
   {#if metadata.title}
     <title>{metadata.title}</title>
-    <meta name="title" content={metadata.title} />
+    <meta name="marker" content={metadata.title} />
     <meta property="og:title" content={metadata.title} />
     <meta property="twitter:title" content={metadata.title} />
   {/if}
@@ -38,5 +38,3 @@
 
   <meta property="twitter:card" content={metadata.twitterCard || "summary_large_image"} />
 </svelte:head>
-
-

@@ -27,7 +27,6 @@
     "astro": "^3.5.5",
     "astro-icon": "^0.8.1",
     "astro-useragent": "^2.2.0",
-    "bulma": "^0.9.4",
     "fuse.js": "^6.6.2",
     "sass": "^1.64.2",
     "svelte": "^4.0.0",

@@ -1,5 +1,6 @@
 ---
-title: PowerMyHome (PMH-Solar Generators)
+title: PowerMyHome (PMH)
+subtitle: Zonne Generators voor Thuis
 image: /images/alternative_energy/power-households.jpg
 imageratio: 65%
 headerImage: /images/alternative_energy/power-my-home.jpeg

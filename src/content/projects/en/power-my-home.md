@@ -1,5 +1,6 @@
 ---
-title: PowerMyHome (PMH-Solar Generators)
+title: PowerMyHome (PMH)
+subtitle: Consumer Solar Generators
 pack: teenyicons
 icon: home-outline
 image: /images/alternative_energy/power-households.jpg

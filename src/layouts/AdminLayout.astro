@@ -99,7 +99,7 @@ import Fonts from '../components/head/Fonts.astro';
 						className: 'navbar-item is-hidden-mobile is-active ' + getLightBackgroundColor(color) + ' ' + getTextColor(color)
 					},
 					h('h1', {
-						className: 'title is-size-5 branding-font pl-3 ' + getTextColor(color)
+						className: 'title branding-font pl-3 ' + getTextColor(color)
 					}, 'EZ ICT'),
 					),
 					),
@@ -111,7 +111,7 @@ import Fonts from '../components/head/Fonts.astro';
 						className: "navbar-start is-transparent in:fly-y:-200duration:500 out:fade " + getLightBackgroundColor(color) + ' ' + getTextColor(color)
 					},
 					h('a', {
-						className: "is-size-5 navbar-item mx-1 py-5 has-text-dark " + getHighlightTextColor(color)
+						className: "navbar-item mx-1 py-5 has-text-dark " + getHighlightTextColor(color)
 					},
 					h('span', {
 						className: 'icon-text is-capitalized'
@@ -135,10 +135,10 @@ import Fonts from '../components/head/Fonts.astro';
 						className: 'box notification is-transparent content ' + getLightBackgroundColor(color)
 					},
 					h('h1', {
-						className: 'title is-size-4 ' + getTextColor(color)
+						className: 'title ' + getTextColor(color)
 					}, entry.getIn(['data', 'title'])),
 					h('h2', {
-						className: 'subtitle is-size-5 ' + getTextColor(color)
+						className: 'subtitle ' + getTextColor(color)
 					}, entry.getIn(['data', 'subtitle'])),
 					h('div', {
 						className: 'content ' + getTextColor(color)

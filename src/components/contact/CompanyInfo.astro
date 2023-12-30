@@ -1,16 +1,16 @@
 ---
-  let lang = 'en';
-  const locale = {}
-  locale['en'] = {
-      "telephone": "Telephone",
-      "bankaccount": "IBAN / Bank nr.",
-      "tax": "Chamber of Commerce nr. "
-  }
-  locale['nl'] = {
-    "telephone": "Telefoon",
-      "bankaccount": "IBAN Rekening",
-      "tax": "KVK Nummer"
-  }
+let lang = 'en';
+const locale = {}
+locale['en'] = {
+  "telephone": "Telephone",
+  "bankaccount": "IBAN / Bank nr.",
+  "tax": "Chamber of Commerce nr. "
+}
+locale['nl'] = {
+  "telephone": "Telefoon",
+  "bankaccount": "IBAN Rekening",
+  "tax": "KVK Nummer"
+}
 ---
 
 <nav class="landscape:md:flex justify-center mx-auto text-sm">
@@ -18,9 +18,9 @@
     <div>
       <p class="font-bold text-secondary-500">{ locale[lang].telephone } (HOLLAND)
       </p>
-      <p class="h4 font-bold text-md "><a
-					class="text-secondary"
-					href="tel:+31(0)6 285 86 335" title="Call Ezri Harmusial">+31(0)6 285 86 335</a>
+      <p class="h4 font-bold text-sm "><a
+        class="!text-secondary-100"
+        href="tel:+31(0)6 285 86 335" title="Call Ezri Harmusial">+31(0)6 285 86 335</a>
       </p>
     </div>
   </div>
@@ -28,9 +28,10 @@
     <div>
       <p class="font-bold text-secondary-500">{ locale[lang].telephone } (AFRICA)
       </p>
-      <p class="h4 font-bold text-md "><a href="tel:+234 916 060 2716"
-					class="has-text-secondary"
-					title="Call ArtKids Africa">+234 916 060 2716</a>
+      <p class="h4 font-bold text-sm ">
+        <a href="tel:+234 916 060 2716"
+        class="!text-secondary-100"
+        title="Call ArtKids Africa">+234 916 060 2716</a>
       </p>
     </div>
   </div>
@@ -38,7 +39,7 @@
     <div>
       <p class="font-bold text-secondary-500">{ locale[lang].bankaccount }
       </p>
-      <p class="h4 font-bold text-md ">NL 92 INGB 000 663 90 81
+      <p class="h4 font-bold text-sm  text-secondary-100">NL 92 INGB 000 663 90 81
       </p>
     </div>
   </div>
@@ -46,7 +47,7 @@
     <div>
       <p class="font-bold text-secondary-500">{ locale[lang].tax }
       </p>
-      <p class="h4 font-bold text-md ">55762441
+      <p class="h4 font-bold text-sm text-secondary-100">55762441
       </p>
     </div>
   </div>

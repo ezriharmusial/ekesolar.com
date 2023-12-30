@@ -18,14 +18,14 @@ const projects = await getCollection('projects')
 
 ---
 
-<section class="section">
+<section class="section bg-slate-700">
   {projects &&
     <div class="grid landscape:2xl:grid-cols-3 landscape:md:grid-cols-2 gap-4">
       <!-- iterate through each projectt -->
       {projects.map((project) => (
-        <article class="card card-hover variant-filled-primary my-4 ">
-            <header class="card-header">
-              <figure class="is-relative">
+        <article class="card card-hover overflow-clip transition duration-300 text-secondary-400 hover:text-slate-900 variant-ghost-secondary bg-slate-800 hover:variant-filled-secondary">
+            <header class="card-header aspect-video overflow-hidden p-0">
+              <figure class="is-relative object-fill">
                 <Image
                 ratio={project.data.imageratio || "65%"}
                 src={project.data.image }
@@ -35,16 +35,16 @@ const projects = await getCollection('projects')
                 />
               </figure>
             </header>
-            <section class="p-4 content">
-              <h3 class="title">
+            <section class="p-4">
+              <h3 class="marker">
                 {project.data.title}
               </h3>
               {project.data.subtitle &&
-                <h4 class="subtitle">
+                <h4 class="mb-4">
                   {project.data.subtitle}
                 </h4>
               }
-              <p class="subtitle has-text-white">
+              <p class="mb-4">
                 {project.data.hook}
               </p>
               <a href={"/" + lang + "/projects/" + project.slug.slice(3) } class="button is-fullwidth is-secondary">{ locale[lang].readmore }...</a>

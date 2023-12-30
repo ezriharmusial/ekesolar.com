@@ -4,12 +4,12 @@
 
 function getRatio(){
 
-	return linkcast.data?.imageRatio == 'aspect-square' ? '1:1'
-		: linkcast.data?.imageRatio == 'aspect-[9/16]' ? '9:16'
-		: linkcast.data?.imageRatio == 'aspect-[16/9]' ? '16:9'
-		: linkcast.data?.imageRatio == 'aspect-[9/21]' ? '9:21'
-		: linkcast.data?.imageRatio == 'aspect-[21/9]' ? '21:9'
-		: linkcast.data?.imageRatio == 'aspect-[3/4]' ? '3:4'
+	return linkcast.data?.imageratio == 'aspect-square' ? '1:1'
+		: linkcast.data?.imageratio == 'aspect-[9/16]' ? '9:16'
+		: linkcast.data?.imageratio == 'aspect-[16/9]' ? '16:9'
+		: linkcast.data?.imageratio == 'aspect-[9/21]' ? '9:21'
+		: linkcast.data?.imageratio == 'aspect-[21/9]' ? '21:9'
+		: linkcast.data?.imageratio == 'aspect-[3/4]' ? '3:4'
 		: '4:3'
 }
 	let linkcast = Astro.props.linkcast

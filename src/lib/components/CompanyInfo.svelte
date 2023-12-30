@@ -43,7 +43,7 @@
     <div>
       <p class="heading">{ locale[lang].tax }
       </p>
-      <p class="title is-size-6-desktop is-size-6-touch">55762441
+      <p class="title text-blue-900">55762441
       </p>
     </div>
   </div>

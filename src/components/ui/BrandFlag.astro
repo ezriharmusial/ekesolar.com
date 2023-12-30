@@ -4,8 +4,8 @@ import Fa from "svelte-fa";
 const { logoOnly, icon = true, size="hexagon-small" } = Astro.props
 ---
 
-<a class="marker flex flex-shrink h-full w-full italic font-sans items-center !no-underline drop-shadow hover:text-yellow-400 dark:focus:text-gray-100 px-2 py-4" href="/">
-    <h1 class="unstyled flex items-center justify-center gap-2 transition-colors duration-500 text-left font-light text-2xl leading-7 hover:text-yellow-400 dark:focus:text-gray-100">
+<a class="marker h-full italic font-sans items-center !no-underline drop-shadow hover:text-yellow-400 dark:focus:text-gray-100 px-2 py-4" href="/">
+    <h1 class="flex items-center justify-center gap-2 transition-colors duration-500 text-left font-light text-2xl leading-7 hover:text-yellow-400 dark:focus:text-gray-100">
 
 {icon &&
         <div class={"self-center drop-shadow-lg hexagon " + size}><div class="hexagon-in1"><div class="hexagon-in2">
@@ -13,9 +13,9 @@ const { logoOnly, icon = true, size="hexagon-small" } = Astro.props
 }
 
 {!logoOnly &&
-              <span class="flex items-center justify-center self-center gap-3">
-                <span class="artkids has-text-info">Eke</span><span class="foundation has-text-success">Solar</span>
-                <span class="icon is-medium has-text-secondary self-center drop-shadow">
+              <span class="flex items-center justify-center self-center">
+                <span class="artkids text-blue-400">Eke</span><span class="foundation text-orange-400">Solar</span>
+                <span class="icon is-medium text-secondary-400 self-center drop-shadow">
                   <Fa icon={faSun} />
                 </span>
                 Unlimited

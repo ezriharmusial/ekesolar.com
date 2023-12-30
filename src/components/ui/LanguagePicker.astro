@@ -3,12 +3,16 @@ import Icon from 'astro-icon';
 import { languages } from '~content/i18n/ui';
 import { getLangFromUrl, useTranslations } from '~content/i18n/utils';
 
+const { style = 'dark' } = Astro.props
+
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang);
+
+let textColor = style == 'dark' ? 'text-primary-800' : 'text-primary-200'
 ---
 
 <div class="dropdown">
-  <button class="flex flex-col justify-center items-center">
+  <button class={"flex flex-col justify-center items-center " + textColor}>
     <Icon pack="clarity" name="language-line" class="w-8 h-8"/>
     <span>
         {t('nav.language')}

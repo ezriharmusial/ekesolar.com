@@ -45,7 +45,7 @@
     <div class="artkids-social">
       {#if !nativeShare}
         <h4
-          class="subtitle is-size-6-mobile is-size-5-tablet is-size-4-widescreen is-size-4-fullhd has-text-grey-dark is-uppercase has-text-weight-normal">
+          class="subtitle is-size-6-mobile -tablet -widescreen -fullhd has-text-grey-dark is-uppercase has-text-weight-normal">
           { locale[lang].share_this }:</h4>
         <a class="button is-social is-medium facebook fbc-has-badge fbc-UID_1"
            href="https://www.facebook.com/sharer/sharer.php?u={encodeURIComponent(url)}"

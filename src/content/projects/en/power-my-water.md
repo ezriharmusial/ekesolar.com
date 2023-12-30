@@ -1,10 +1,11 @@
 ---
-title: PowerMyWater (PMW-Solar Water-pumps)
+title: PowerMyWater (PMW)
+subtitle: Solar Powered Waterpumps
 pack: teenyicons
 icon: plant-outline
 image: /images/alternative_energy/solar-pump.jpg
 headerImage: /images/alternative_energy/solar-agricultural-pumps.jpg
-hook: "Sumos&colon; Solar Powered Water pumps to replace obsolete Hydroelectric and Fossil Fueled powered boreholes."
+hook: "Sumos; Solar Powered Waterpumps to replace obsolete Hydroelectric and Fossil Fueled powered boreholes."
 date: 11-12-2020
 ---
 

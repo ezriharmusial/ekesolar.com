@@ -28,10 +28,10 @@ const { Content } = await project.render()
 
 const locale = {};
 locale['en'] = {
-"contact_us": "Contact Us"
+	"contact_us": "Contact Us"
 }
 locale['nl'] = {
-"contact_us": "Contact"
+	"contact_us": "Contact"
 }
 
 // console.log('project', lang + "/" + slug, project || 'Naaaeeh')
@@ -39,67 +39,64 @@ locale['nl'] = {
 ---
 <!-- <Meta {metadata}/> -->
 <BaseLayout title={project?.data.title} image={project?.data.headerImage} description={project?.data.hook} pack={project?.data.pack} icon={project?.data.icon}>
-<!-- display the project -->
-<header class="hero is-bold is-black is-clipped">
-	<figure class="image is-overlay">
-		<Image class="is-overlay object-cover"
-				 src={(project.data.headerimage || project.data.image) }
-				 alt={project.data.imageAlt || "Primary African Energy"} width={1920} height={1080}/>
-	</figure>
-	<div class="hero-body">
-		<div class="container">
-			<div class="columns is-vcentered">
-				<div class="column is-half">
-					<div class="section box has-background-black ">
-						<h1 class="title">
-							{project.data.title}
-						</h1>
-						<p class="subtitle is-size-4">
-						{project.data.hook}
-						</p>
-						<a class="button is-secondary" title="Contact us!" href={"/" + lang + "/contact-us/"}=>
-							<span class="icon">
-								<Fa icon={faWeixin} />
-							</span>
-							<span>{ locale[lang]['contact_us'] }</span>
-						</a>
+	<!-- display the project -->
+	<header class="hero is-medium is-bold is-black is-clipped">
+		<figure class="image is-overlay">
+			<Image class="is-overlay object-cover"
+			src={(project.data.headerImage || project.data.image) }
+			alt={project.data.imageAlt || "Primary African Energy"} width={1920} height={1080}/>
+		</figure>
+		<div class="hero-body portrait:hidden">
+			<div class="container">
+				<div class="columns is-vcentered">
+					<div class="column inline">
+						<div class="section bg-black/40 inline-block p-5">
+							<h1 class="title is-size-3">
+								{project.data.title}
+							</h1>
+							<p class="subtitle ">
+								{project.data.hook}
+							</p>
+							<a class="button is-secondary" title="Contact us!" href={"/" + lang + "/contact-us/"}=>
+								<span class="icon">
+									<Fa icon={faWeixin} />
+								</span>
+								<span>{ locale[lang]['contact_us'] }</span>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</header>
+	</header>
 
-<section class="section">
-	<div class="container content">
-		<div class="columns is-multiline">
-			<div class="column is-three-fifths mx-auto ">
-				<h2 class="title">{project.data.title}</h2>
-				{ project.data.subtitle &&
-					<h3 class="subtitle">{project.data.subtitle}</h3>
-				}
-				<div class="mb-4 prose max-w-none prose-stone landscape:w-1/2 landscape:xl:w-3/4 space-y-6 prose-table:table-auto prose-p:text-xl prose-p:text-secondary-800-100-token prose-headings:text-secondary-800-100-token">
-
-				<Content />
+	<section class="section bg-slate-700 text-primary-400">
+		<div class="container content">
+			<div class="columns is-multiline">
+				<div class="column is-three-fifths mx-auto ">
+					<h2 class="marker !text-secondary-50">{project.data.title}</h2>
+					{ project.data.subtitle &&
+						<h3 class="marker !text-secondary-50">{project.data.subtitle}</h3>
+					}
+					<div class="mb-4 prose max-w-none prose-stone space-y-6 prose-table:table-auto prose-p:text-xl text-secondary-50">
+						<Content />
+					</div>
+					<!-- <slot /> -->
+					<a class="button is-secondary" href={"/" + lang + "/contact-us/"} title="Contact Us">
+						<span class="icon">
+							<Fa icon={faWeixin} />
+						</span>
+						<span>{ locale[lang]['contact_us'] }</span>
+					</a>
 				</div>
-				<!-- <slot /> -->
-				<a class="button is-secondary" href={"/" + lang + "/contact-us/"} title="Contact Us">
-					<span class="icon">
-						<Fa icon={faWeixin} />
-					</span>
-					<span>{ locale[lang]['contact_us'] }</span>
-				</a>
-			</div>
-			<div class="column">
-				<figure class="image">
-					<Image
-					src={project.data.image}
-					alt={project.data.imageAlt || "Primary African Energy"} width={1920} height={1080} />
-				</figure>
+				<div class="column">
+					<figure class="image">
+						<Image
+						src={project.data.image}
+						alt={project.data.imageAlt || "Primary African Energy"} width={1920} height={1080} />
+					</figure>
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
-
-<Share />
+	</section>
 </BaseLayout>

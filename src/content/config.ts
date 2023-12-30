@@ -44,7 +44,7 @@ const linkcasts = defineCollection({
         seoTitle: z.string().optional(),
         imageAlt: z.string().optional(),
         image: z.string().optional(),
-        imageRatio: z.string().optional(),
+        imageratio: z.string().optional(),
         date: z.date().optional(),
         url: z.string().optional(),
         color: z.string().optional(),

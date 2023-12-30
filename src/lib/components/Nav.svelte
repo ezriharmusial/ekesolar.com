@@ -73,14 +73,14 @@
 <header class="banner">
 	<nav class="navbar is-fixed-top is-black" aria-label="main navigation">
 		<div class="navbar-brand">
-			<a class="navbar-item has-text-weight-bold is-italic has-text-shadow is-size-5" href={'/'} on:click={foldMenu}>
+			<a class="navbar-item font-bold italic drop-shadow " href={'/'} on:click={foldMenu}>
 				<span class="icon">
 					<img src="/android-chrome-192x192.png" alt="EkeSolar Unlimited: Funding Happiness" width="30" height="30">
 				</span>
 				<span>
 
-					<!--span class="artkids has-text-info">EkeSolar</span>
-						<span class="foundation has-text-success">Unlimited</span-->
+					<!--span class="artkids text-blue-400">EkeSolar</span>
+						<span class="foundation text-orange-400">Unlimited</span-->
 						</a>
 						<div class="navbar-item">
 							<LanguageSwitcher />
