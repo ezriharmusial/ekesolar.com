@@ -200,15 +200,16 @@ const metadata = {
 		</div>
 	</section>
 
-	<a href="/images/alternative_energy/solar-power-world-map.jpg" alt="Open Image">
-		<figure>
-			<Image width={1920} height={1080} ratio="60%" src="/images/alternative_energy/solar-power-world-map.jpg" alt={ locale[lang].home.fig.hydrosolar.alt }/>
-		</figure>
-	</a>
+	<section class="bg-white p-4 landscape:p-8">
 
-	<section class="container bg-white">
-		<div class="card bg-slate-800 text-slate-100 mx-8 mb-8 p-4">
-			<h2 class="title text-yellow-400">{ locale[lang].home.specialist.question }</h2>
+		<a href="/images/alternative_energy/solar-power-world-map.jpg" alt="Open Image">
+			<figure>
+				<Image width={1920} height={1080} ratio="60%" src="/images/alternative_energy/solar-power-world-map.jpg" alt={ locale[lang].home.fig.hydrosolar.alt }/>
+			</figure>
+		</a>
+
+		<div class="card bg-slate-800 text-slate-100 p-4 landscape:w-1/2 mx-auto">
+			<h2 class="title text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter  text-yellow-400">{ locale[lang].home.specialist.question }</h2>
 			<h3 class="marker">
 				{ locale[lang].home.specialist.looking }
 			</h3>
@@ -233,7 +234,7 @@ const metadata = {
 
 	<section class="container grid lg:grid-cols-2 place-items-start gap-4 landscape:gap-8 portrait:xl:gap-8 pt-16 pb-8 md:pt-12 md:pb-24 bg-slate-800 text-slate-100 p-4">
 			<div>
-				<h2 class="marker">
+				<h2 class="marker text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter ">
 					#Solar_Africa: { locale[lang].home.challenges.title }
 				</h2>
 
@@ -267,43 +268,36 @@ const metadata = {
 			</div>
 	</section>
 
-	<section class="section has-background-black">
-		<div class="container">
-			<div class="columns is-vcentered">
-				<div class="column">
-					<h2 class="title has-text-white">
-						{ locale[lang].home.solution.title }
-					</h2>
-					<p class="has-text-white">
-						{ locale[lang].home.solution.know }
-					</p>
-				</div>
-				<div class="column is-one-thirds">
-					<figure class="image">
-						<Image height={640} width={640} src="/images/alternative_energy/ekesolar-logo.png" alt="EkeSolar Unlimited"/>
-					</figure>
-				</div>
-			</div>
+	<section class="container flex portrait:flex-col portrait:lg:flex-row items-center gap-4 landscape:gap-8 portrait:xl:gap-8 pt-16 pb-8 md:pt-12 md:pb-24 bg-slate-100 text-slate-900 p-8">
+		<div class="column">
+			<h2 class="title has-text-white text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter ">
+				{ locale[lang].home.solution.title }
+			</h2>
+			<p class="has-text-white">
+				{ locale[lang].home.solution.know }
+			</p>
+		</div>
+		<div class="column min-w-1/4">
+			<figure class="image">
+				<Image height={640} width={640} src="/images/alternative_energy/ekesolar-logo.png" alt="EkeSolar Unlimited" class="w-48"/>
+			</figure>
 		</div>
 	</section>
 
-	<section class="hero is-secondary is-bold">
-		<div class="image is-16by9 has-background-black">
-			<iframe class="is-overlay" data-embed="5G-AojIVp6g" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="https://www.youtube.com/embed/5G-AojIVp6g?enablejsapi=0&amp;muted=1&amp;autoplay=0&amp;controls=0&amp;fs=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;origin=https%3A%2F%2Fekesolar.com&amp;widgetid=1" width="100%" height="100%" frameborder="0"></iframe>
-		</div>
-		<div class="section">
-			<div class="container has-text-centered drop-shadow">
-				<h1 class="title font-bold">
-					<span>
+	<section class="image aspect-video bg-black">
+		<iframe class="is-overlay" data-embed="5G-AojIVp6g" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="https://www.youtube.com/embed/5G-AojIVp6g?enablejsapi=0&amp;muted=1&amp;autoplay=0&amp;controls=0&amp;fs=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;origin=https%3A%2F%2Fekesolar.com&amp;widgetid=1" width="100%" height="100%" frameborder="0"></iframe>
+	</section>
+
+	<section class="bg-primary-600 text-secondary-400">
+			<div class="container text-center drop-shadow p-4 pt-16 pb-8 portrait:pt-32">
+				<h1 class="title flex mx-auto justify-center text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter ">
 						<span class="artkids text-blue-400">Eke</span><span class="foundation text-orange-400">Solar</span>
 						<span class="icon is-medium text-secondary-400">
 							<Fa icon={faSun} />
 						</span>
 						Africa
-					</span>
 				</h1>
 				<h2 id="projects" class="subtitle is-size-3 font-bold">{ locale[lang].home.projects_title }</h2>
-			</div>
 		</div>
 	</section>
 </div>

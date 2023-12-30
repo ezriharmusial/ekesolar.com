@@ -18,12 +18,12 @@ const projects = await getCollection('projects')
 
 ---
 
-<section class="section bg-slate-700">
+<section class="container bg-slate-600 p-4 landscape:p-8">
   {projects &&
-    <div class="grid landscape:2xl:grid-cols-3 landscape:md:grid-cols-2 gap-4">
+    <div class="grid landscape:2xl:grid-cols-3 landscape:md:grid-cols-2 gap-4 landscape:gap-8 portrait:lg:gap-8">
       <!-- iterate through each projectt -->
       {projects.map((project) => (
-        <article class="card card-hover overflow-clip transition duration-300 text-secondary-400 hover:text-slate-900 variant-ghost-secondary bg-slate-800 hover:variant-filled-secondary">
+        <a href={"/" + lang + "/projects/" + project.slug.slice(3) } class="card card-hover transition duration-300 text-secondary-400 hover:text-slate-900 variant-ghost-secondary bg-slate-800 hover:variant-filled-secondary">
             <header class="card-header aspect-video overflow-hidden p-0">
               <figure class="is-relative object-fill">
                 <Image
@@ -36,7 +36,7 @@ const projects = await getCollection('projects')
               </figure>
             </header>
             <section class="p-4">
-              <h3 class="marker">
+              <h3 class="marker mb-4">
                 {project.data.title}
               </h3>
               {project.data.subtitle &&
@@ -47,10 +47,9 @@ const projects = await getCollection('projects')
               <p class="mb-4">
                 {project.data.hook}
               </p>
-              <a href={"/" + lang + "/projects/" + project.slug.slice(3) } class="button is-fullwidth is-secondary">{ locale[lang].readmore }...</a>
+              <p class="btn w-full variant-filled-secondary mb-4">{ locale[lang].readmore }...</p>
             </section>
-            <hr class="is-hidden-tablet has-background-secondary"/>
-        </article>
+        </a>
         ))}
       </div>
     }
