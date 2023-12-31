@@ -45,8 +45,8 @@ const t = useTranslations(lang);
 <div class={parentDirectionClass + " bg-secondary-600 w-full"}>
 
             {projectList && projectList.filter(project => getLangFromId(project) == lang).map(project => (
-                <a href={"/" + project.slug.split('/')[0] + "/projects/" + project.slug.split('/')[1]} class={"btn variant-filled-secondary w-full rounded-none justify-start pl-2 " + project.slug.split('/')[0]}>
-                    <span class="flex flex-row justify-start items-center text-md">
+                <a href={"/" + project.slug.split('/')[0] + "/projects/" + project.slug.split('/')[1]} class={"btn h-16 py-4 variant-filled-secondary w-full rounded-none justify-start pl-2 " + project.slug.split('/')[0]}>
+                    <span class="flex flex-row justify-start items-center text-lg marker">
                         <Icon pack={project.data.pack || "teenyicons"} name={project.data.icon || "anchor-solid"} class={size + " mr-2"} />
                         { project.data?.shortTitle ?
                         <span>

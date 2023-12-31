@@ -10,6 +10,7 @@ export interface Props {
 	fbappid?: string;
 }
 
+
 const { title, seoTitle, description, image, imageAlt, fbappid } = Astro.props
 
 // Catch Image Url Inconsistencies
@@ -39,11 +40,11 @@ const canonicalURL = Astro.url.origin + Astro.url.pathname;
 
 <title>{title ? title + SITE_TITLE_POSTFIX : SITE_TITLE + SITE_TITLE_POSTFIX}</title>
 <meta name="robots" content="index,follow">
-<meta name="description" content={description || SITE_DESCRIPTION}>
+<meta name="description" content={(description || SITE_DESCRIPTION) + " " + SITE_TITLE}>
 <!-- Facebook OpenGraph -->
 <meta property="fb:app_id" content={fbappid}/>
 <meta property="og:title" content={title || "Welkom to ekesolar.com"}>
-<meta property="og:description" content={description || SITE_DESCRIPTION}>
+<meta property="og:description" content={(description || SITE_DESCRIPTION) + " " + SITE_TITLE}>
 <meta property="og:url" content={canonicalURL}>
 <meta property="og:type" content="website">
 <meta property="og:image" content={imageUrl(image)}>
@@ -53,7 +54,7 @@ const canonicalURL = Astro.url.origin + Astro.url.pathname;
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:title" content={title || "Welkom to ekesolar.com"}>
-<meta property="twitter:description" content={description || "Welkom to ekesolar.com"}>
+<meta property="twitter:description" content={(description || SITE_DESCRIPTION) + " " + SITE_TITLE}>
 <meta property="twitter:image" content={imageUrl(image)}>
 
 <!-- Manifest Files -->

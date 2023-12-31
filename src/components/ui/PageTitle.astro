@@ -3,7 +3,7 @@ import Icon from "astro-icon";
 const { title, icon, pack } = Astro.props
 ---
 <div class="flex justify-center items-center title">
-    <p class="marker transition-colors duration-500 text-center text-3xl lg:text-4xl xl:text-5xl portrait:text-2xl portrait:md:text-4xl font-bold lg:tracking-tight xl:tracking-tighter  drop-shadow-2xl text-yellow-400 dark:focus:text-gray-100">
+    <p class="marker transition-colors duration-500 text-center text-3xl lg:text-4xl xl:text-5xl portrait:text-xl portrait:md:text-3xl font-bold lg:tracking-tight xl:tracking-tighter  drop-shadow-2xl text-yellow-400 dark:focus:text-gray-100">
     {icon &&
     <Icon pack={pack || "teenyicons"} name={icon || "sun-solid"} class={"h-8 w-8 lg:h-10 lg:w-10 portrait:h-6 portrait:w-6 mr-1 inline"} />
     }

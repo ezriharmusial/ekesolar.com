@@ -40,7 +40,7 @@ locale['nl'] = {
 <!-- <Meta {metadata}/> -->
 <BaseLayout title={project?.data.title} image={project?.data.headerImage} description={project?.data.hook} pack={project?.data.pack} icon={project?.data.icon}>
 	<!-- display the project -->
-	<header class="bg-black landscape:flex portrait:aspect-video overflow-clip">
+	<header class="bg-black landscape:flex">
 		<figure class="image">
 			<Image class="object-cover"
 			src={(project.data.headerImage || project.data.image) }
@@ -62,7 +62,7 @@ locale['nl'] = {
 
 	<section class="section bg-slate-700 text-primary-400">
 		<div class="container mx-auto">
-			<div class="flex portrait:flex-col gap-8 p-8">
+			<div class="flex portrait:flex-col gap-8 p-8 portrait:p-4">
 				<div class="landscape:w-3/5">
 					<h2 class="marker text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter  !text-secondary-50">{project.data.title}</h2>
 					{ project.data.subtitle &&
