@@ -232,7 +232,8 @@ const metadata = {
 		</figure>
 	</section>
 
-	<section class="container grid lg:grid-cols-2 place-items-start gap-4 landscape:gap-8 portrait:xl:gap-8 pt-16 pb-8 md:pt-12 md:pb-24 bg-slate-800 text-slate-100 p-4">
+	<section class="bg-slate-800 text-slate-100 p-4 w-full" >
+		<div class="container  mx-auto grid lg:grid-cols-2 place-items-start gap-4 landscape:gap-8 portrait:xl:gap-8 pt-16 pb-8 md:pt-12 md:pb-24">
 			<div>
 				<h2 class="marker text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter ">
 					#Solar_Africa: { locale[lang].home.challenges.title }
@@ -266,21 +267,24 @@ const metadata = {
 				</p>
 
 			</div>
+		</div>
 	</section>
 
-	<section class="container flex portrait:flex-col portrait:lg:flex-row items-center gap-4 landscape:gap-8 portrait:xl:gap-8 pt-16 pb-8 md:pt-12 md:pb-24 bg-slate-100 text-slate-900 p-8">
-		<div class="column">
-			<h2 class="title has-text-white text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter ">
-				{ locale[lang].home.solution.title }
-			</h2>
-			<p class="has-text-white">
-				{ locale[lang].home.solution.know }
-			</p>
-		</div>
-		<div class="column min-w-1/4">
-			<figure class="image">
-				<Image height={640} width={640} src="/images/alternative_energy/ekesolar-logo.png" alt="EkeSolar Unlimited" class="w-48"/>
-			</figure>
+	<section class=" bg-slate-100 text-slate-900 w-full p-8 portait:p-4">
+		<div class="container mx-auto flex portrait:flex-col portrait:lg:flex-row items-center gap-4 landscape:gap-8 portrait:xl:gap-8 pt-16 pb-8 md:pt-12 md:pb-24">
+			<div class="column">
+				<h2 class="title has-text-white text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter ">
+					{ locale[lang].home.solution.title }
+				</h2>
+				<p class="has-text-white">
+					{ locale[lang].home.solution.know }
+				</p>
+			</div>
+			<div class="column min-w-1/4">
+				<figure class="image">
+					<Image height={640} width={640} src="/images/alternative_energy/ekesolar-logo.png" alt="EkeSolar Unlimited" class="w-48"/>
+				</figure>
+			</div>
 		</div>
 	</section>
 
@@ -289,15 +293,15 @@ const metadata = {
 	</section>
 
 	<section class="bg-primary-600 text-secondary-400">
-			<div class="container text-center drop-shadow p-4 pt-16 pb-8 portrait:pt-32">
-				<h1 class="title flex mx-auto justify-center text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter ">
-						<span class="artkids text-blue-400">Eke</span><span class="foundation text-orange-400">Solar</span>
-						<span class="icon is-medium text-secondary-400">
-							<Fa icon={faSun} />
-						</span>
-						Africa
-				</h1>
-				<h2 id="projects" class="subtitle is-size-3 font-bold">{ locale[lang].home.projects_title }</h2>
+		<div class="container text-center drop-shadow p-4 pt-16 pb-8 portrait:pt-32">
+			<h1 class="title flex mx-auto justify-center text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter ">
+					<span class="artkids text-blue-400">Eke</span><span class="foundation text-orange-400">Solar</span>
+					<span class="icon is-medium text-secondary-400">
+						<Fa icon={faSun} />
+					</span>
+					Africa
+			</h1>
+			<h2 id="projects" class="subtitle is-size-3 font-bold">{ locale[lang].home.projects_title }</h2>
 		</div>
 	</section>
 </div>

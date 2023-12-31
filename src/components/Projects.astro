@@ -18,15 +18,17 @@ const projects = await getCollection('projects')
 
 ---
 
-<section class="container bg-slate-600 p-4 landscape:p-8">
+<section class="bg-slate-600 p-4 landscape:p-8 w-full">
+  <div class="container mx-auto">
   {projects &&
     <div class="grid landscape:2xl:grid-cols-3 landscape:md:grid-cols-2 gap-4 landscape:gap-8 portrait:lg:gap-8">
       <!-- iterate through each projectt -->
       {projects.map((project) => (
-        <a href={"/" + lang + "/projects/" + project.slug.slice(3) } class="card card-hover transition duration-300 text-secondary-400 hover:text-slate-900 variant-ghost-secondary bg-slate-800 hover:variant-filled-secondary">
-            <header class="card-header aspect-video overflow-hidden p-0">
-              <figure class="is-relative object-fill">
+        <a href={"/" + lang + "/projects/" + project.slug.slice(3) } class="card card-hover overflow-hidden transition duration-300 text-secondary-400 hover:text-slate-900 variant-ghost-secondary bg-slate-800 hover:variant-filled-secondary">
+            <header class="card-header aspect-video p-0 overflow-hidden">
+              <figure>
                 <Image
+                class="object-fill"
                 ratio={project.data.imageratio || "65%"}
                 src={project.data.image }
                 alt={"Read more on " + project.data.title}
@@ -57,4 +59,5 @@ const projects = await getCollection('projects')
       <span>Helaas hebben we nog geen Projecten online staan.</span>
     }
 
+      </div>
   </section>
