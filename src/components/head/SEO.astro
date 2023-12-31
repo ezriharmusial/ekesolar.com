@@ -35,7 +35,7 @@ const canonicalURL = Astro.url.origin + Astro.url.pathname;
 <!-- Global Metadata -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/svg+xml" href={SITE_URL + "/favicon.svg"} />
 <meta name="generator" content={Astro.generator} />
 
 <title>{title ? title + SITE_TITLE_POSTFIX : SITE_TITLE + SITE_TITLE_POSTFIX}</title>
@@ -58,40 +58,40 @@ const canonicalURL = Astro.url.origin + Astro.url.pathname;
 <meta property="twitter:image" content={imageUrl(image)}>
 
 <!-- Manifest Files -->
-<link rel="shortcut icon" type="image/png" href="/images/manifest/favicon-32x32.png" sizes="32x32" />
+<link rel="shortcut icon" type="image/png" href={SITE_URL + "/images/manifest/favicon-32x32.png"} sizes="32x32" />
 
 <!-- <meta name="Description" content={description}> -->
 <meta name="author" content="Stichting ArtKids Foundation">
 <!-- Viewport (iPhone 5 friendly) -->
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-<link rel="icon" type="image/png" href="/images/manifest/favicon-16x16.png" sizes="16x16">
-<link rel="icon" type="image/png" href="/images/manifest/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/images/manifest/android-192x192.png" sizes="192x192">
-<link rel="apple-touch-icon" href="/images/manifest/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href={SITE_URL + "/images/manifest/favicon-16x16.png"} sizes="16x16">
+<link rel="icon" type="image/png" href={SITE_URL + "/images/manifest/favicon-32x32.png"} sizes="32x32">
+<link rel="icon" type="image/png" href={SITE_URL + "/images/manifest/android-192x192.png"} sizes="192x192">
+<link rel="apple-touch-icon" href={SITE_URL + "/images/manifest/apple-touch-icon-180x180.png"} sizes="180x180">
 
 <!-- For third-generation iPad with high-resolution Retina display: -->
-<link rel="apple-touch-icon-precomposed" type="image/png" href="/images/manifest/apple-touch-icon-144x144-precomposed.png" sizes="144x144">
+<link rel="apple-touch-icon-precomposed" type="image/png" href={SITE_URL + "/images/manifest/apple-touch-icon-144x144-precomposed.png"} sizes="144x144">
 <!-- For iPhone with high-resolution Retina display: -->
-<link rel="apple-touch-icon-precomposed" type="image/png" sizes="114x114" href="/images/manifest/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" type="image/png" sizes="114x114" href={SITE_URL + "/images/manifest/apple-touch-icon-114x114-precomposed.png"}>
 <!-- For first- and second-generation iPad: -->
-<link rel="apple-touch-icon-precomposed" type="image/png" sizes="72x72" href="/images/manifest/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" type="image/png" sizes="72x72" href={SITE_URL + "/images/manifest/apple-touch-icon-72x72-precomposed.png"}>
 <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-<link rel="apple-touch-icon-precomposed" type="image/png" href="/images/manifest/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" type="image/png" href={SITE_URL + "/images/manifest/apple-touch-icon-precomposed.png"}>
 
 <!-- iPhone SPLASHSCREEN-->
-<link rel="apple-touch-startup-image" type="image/png" href="/images/manifest/apple-touch-startup-image-320x460.png" media="(device-width: 320px)">
+<link rel="apple-touch-startup-image" type="image/png" href={SITE_URL + "/images/manifest/apple-touch-startup-image-320x460.png"} media="(device-width: 320px)">
 <!-- iPhone (Retina) SPLASHSCREEN-->
-<link rel="apple-touch-startup-image" type="image/png" href="/images/manifest/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 460px) and (-webkit-device-pixel-ratio: 2)">
+<link rel="apple-touch-startup-image" type="image/png" href={SITE_URL + "/images/manifest/apple-touch-startup-image-640x920.png"} media="(device-width: 320px) and (device-height: 460px) and (-webkit-device-pixel-ratio: 2)">
 <!-- iPhone 5 (Retina) SPLASHSCREEN-->
-<link rel="apple-touch-startup-image" type="image/png" href="/images/manifest/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
+<link rel="apple-touch-startup-image" type="image/png" href={SITE_URL + "/images/manifest/apple-touch-startup-image-640x1096.png"} media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
 <!-- iPad (non-Retina) (Portrait) -->
-<link rel="apple-touch-startup-image" type="image/png" href="/images/manifest/apple-touch-startup-image-768x1004.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" />
+<link rel="apple-touch-startup-image" type="image/png" href={SITE_URL + "/images/manifest/apple-touch-startup-image-768x1004.png"} media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" />
 <!-- iPad (non-Retina) (Landscape) -->
-<!-- <link rel="apple-touch-startup-image" type="image/png" href="/images/manifest/apple-touch-startup-image-1024x748.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" /> -->
+<!-- <link rel="apple-touch-startup-image" type="image/png" href={SITE_URL + "/images/manifest/apple-touch-startup-image-1024x748.png"} media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" /> -->
 <!-- iPad (Retina) (Portrait) -->
-<link rel="apple-touch-startup-image" type="image/png" href="/images/manifest/apple-touch-startup-image-1536x2008.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2)" />
+<link rel="apple-touch-startup-image" type="image/png" href={SITE_URL + "/images/manifest/apple-touch-startup-image-1536x2008.png"} media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2)" />
 <!-- iPad (Retina) (Landscape) -->
-<link rel="apple-touch-startup-image" type="image/png" href="/images/manifest/apple-touch-startup-image-2048x1496.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2)" />
+<link rel="apple-touch-startup-image" type="image/png" href={SITE_URL + "/images/manifest/apple-touch-startup-image-2048x1496.png"} media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2)" />
 <!-- Fullscreen -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <!-- Status bar styles -->
