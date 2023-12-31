@@ -5,7 +5,7 @@ const { logoOnly, icon = true, size="hexagon-small" } = Astro.props
 ---
 
 <a class="marker !no-underline drop-shadow hover:text-yellow-400 dark:focus:text-gray-100" href="/">
-    <h1 class="flex items-center justify-center transition-colors duration-500 text-left text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter  hover:text-yellow-400 dark:focus:text-gray-100">
+    <h1 class="flex portrait:flex-col items-center justify-center transition-colors duration-500 text-left text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter  hover:text-yellow-400 dark:focus:text-gray-100">
 
 {icon &&
         <div class={"self-center drop-shadow-lg hexagon " + size}><div class="hexagon-in1"><div class="hexagon-in2">
@@ -13,12 +13,17 @@ const { logoOnly, icon = true, size="hexagon-small" } = Astro.props
 }
 
 {!logoOnly &&
-              <span class="flex items-center justify-center self-center">
-                <span class="artkids text-blue-400">Eke</span><span class="foundation text-orange-400">Solar</span>
-                <span class="icon is-medium text-secondary-400 self-center drop-shadow">
-                  <Fa icon={faSun} />
+              <span class="flex portrait:flex-col items-center justify-center self-center">
+                <span>
+                    <span class="artkids text-blue-400">Eke</span><span class="foundation text-orange-400">Solar</span>
                 </span>
-                Unlimited
+
+                <span class="flex">
+                    <span class="icon is-medium text-secondary-400 self-center drop-shadow">
+                    <Fa icon={faSun} />
+                    </span>
+                    <span>Unlimited</span>
+                </span>
               </span>
 
         }
