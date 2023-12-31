@@ -66,10 +66,10 @@ const { title, icon, pack, seoTitle, description, image, imageAlt } = (Astro.pro
 
     <AppShell slotSidebarLeft="bg-secondary-400 h-screen portrait:pb-24 portrait:absolute portrait:left-0 portrait:top-0 portrait:bottom-0 z-20">
         <svelte:fragment slot="header">
-            <AppBar background="z-10 portrait:fixed landscape:sticky top-0 left-0 right-0 w-full bg-slate-900 backdrop-blur">
+            <AppBar slotLead="h-12" background="z-10 sticky top-0 w-full h-20 bg-slate-700 text-yellow-400 drop-shadow">
                 {!title ?
                 <svelte:fragment slot="lead">
-                    <a class="marker flex flex-shrink h-full w-full font-sans justify-center items-center !no-underline drop-shadow text-yellow-400 dark:focus:text-gray-100 px-2 py-4" href="/">
+                    <a class="marker !no-underline drop-shadow text-yellow-400 dark:focus:text-gray-100" href="/">
                         <h1 class="unstyled flex items-center gap-1 transition-colors duration-300 text-left font-light text-4xl leading-7">
                                 <span class="artkids text-blue-400">Eke</span><span class="foundation text-orange-400">Solar</span>
                                 <span class="icon is-medium text-secondary-400">
@@ -80,7 +80,7 @@ const { title, icon, pack, seoTitle, description, image, imageAlt } = (Astro.pro
                 </a>
                 </svelte:fragment>
                 :
-                <figure class="landscape:opacity-0 image -translate-x-1 h-12 transition-all duration-500 m-0 p-0 w-12 -ml-1">
+                <figure class="landscape:opacity-0 image transition-all duration-500">
                     <BrandFlag logoOnly={true} ></BrandFlag>
                 </figure>
                 }
